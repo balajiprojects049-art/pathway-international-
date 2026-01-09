@@ -18,6 +18,8 @@ import CountryEurope from './pages/CountryEurope';
 import CountryIreland from './pages/CountryIreland';
 import CountryUK from './pages/CountryUK';
 
+import SmoothScroll from './components/SmoothScroll';
+
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -33,26 +35,28 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="overflow-x-hidden bg-white">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/destinations" element={<Destinations />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/universities" element={<Universities />} />
-          <Route path="/success" element={<StudentSuccess />} />
-          <Route path="/book-consultation" element={<BookConsultation />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/country/usa" element={<CountryUSA />} />
-          <Route path="/country/uk" element={<CountryUK />} />
-          <Route path="/country/canada" element={<CountryCanada />} />
-          <Route path="/country/australia" element={<CountryAustralia />} />
-          <Route path="/country/ireland" element={<CountryIreland />} />
-          <Route path="/country/europe" element={<CountryEurope />} />
-        </Routes>
-        <Footer />
-      </div>
+      <SmoothScroll>
+        <div className="overflow-x-hidden bg-white">
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/destinations" element={<Destinations />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/universities" element={<Universities />} />
+            <Route path="/success" element={<StudentSuccess />} />
+            <Route path="/book-consultation" element={<BookConsultation />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/country/usa" element={<CountryUSA />} />
+            <Route path="/country/uk" element={<CountryUK />} />
+            <Route path="/country/canada" element={<CountryCanada />} />
+            <Route path="/country/australia" element={<CountryAustralia />} />
+            <Route path="/country/ireland" element={<CountryIreland />} />
+            <Route path="/country/europe" element={<CountryEurope />} />
+          </Routes>
+          <Footer />
+        </div>
+      </SmoothScroll>
     </Router>
   );
 }
