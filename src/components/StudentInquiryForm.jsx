@@ -177,21 +177,70 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             <option value="Master's">Master's Degree</option>
                                             <option value="PhD">PhD</option>
                                         </select>
-                                        <input
-                                            type="text"
+                                        <select
                                             name="fieldOfStudy"
                                             value={formData.fieldOfStudy}
                                             onChange={handleChange}
-                                            placeholder="Field of Study *"
                                             required
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
-                                        />
+                                        >
+                                            <option value="">Field of Study *</option>
+                                            <optgroup label="Engineering & Technology">
+                                                <option value="Computer Science">Computer Science & IT</option>
+                                                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                                <option value="Electrical Engineering">Electrical Engineering</option>
+                                                <option value="Civil Engineering">Civil Engineering</option>
+                                                <option value="Aerospace Engineering">Aerospace Engineering</option>
+                                                <option value="Chemical Engineering">Chemical Engineering</option>
+                                                <option value="Data Science">Data Science & Analytics</option>
+                                                <option value="Artificial Intelligence">Artificial Intelligence & ML</option>
+                                            </optgroup>
+                                            <optgroup label="Business & Management">
+                                                <option value="Business Administration">Business Administration (MBA)</option>
+                                                <option value="Finance">Finance & Accounting</option>
+                                                <option value="Marketing">Marketing & Sales</option>
+                                                <option value="Human Resources">Human Resources</option>
+                                                <option value="International Business">International Business</option>
+                                                <option value="Entrepreneurship">Entrepreneurship</option>
+                                            </optgroup>
+                                            <optgroup label="Health & Medicine">
+                                                <option value="Medicine">Medicine (MD)</option>
+                                                <option value="Nursing">Nursing</option>
+                                                <option value="Pharmacy">Pharmacy</option>
+                                                <option value="Public Health">Public Health</option>
+                                                <option value="Dentistry">Dentistry</option>
+                                                <option value="Biotechnology">Biotechnology</option>
+                                            </optgroup>
+                                            <optgroup label="Arts & Humanities">
+                                                <option value="Psychology">Psychology</option>
+                                                <option value="Economics">Economics</option>
+                                                <option value="Political Science">Political Science</option>
+                                                <option value="Communications">Communications & Media</option>
+                                                <option value="Law">Law (LLB/JD)</option>
+                                                <option value="Education">Education</option>
+                                            </optgroup>
+                                            <optgroup label="Sciences">
+                                                <option value="Physics">Physics</option>
+                                                <option value="Chemistry">Chemistry</option>
+                                                <option value="Biology">Biology</option>
+                                                <option value="Mathematics">Mathematics</option>
+                                                <option value="Environmental Science">Environmental Science</option>
+                                            </optgroup>
+                                            <optgroup label="Creative Arts">
+                                                <option value="Architecture">Architecture</option>
+                                                <option value="Graphic Design">Graphic Design</option>
+                                                <option value="Fashion Design">Fashion Design</option>
+                                                <option value="Film & Media">Film & Media Production</option>
+                                                <option value="Music">Music</option>
+                                            </optgroup>
+                                            <option value="Other">Other (Please Specify in Additional Info)</option>
+                                        </select>
                                         <input
                                             type="text"
                                             name="graduationYear"
                                             value={formData.graduationYear}
                                             onChange={handleChange}
-                                            placeholder="Graduation Year"
+                                            placeholder="Graduation Year (e.g., 2024)"
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         />
                                         <input
@@ -199,7 +248,7 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             name="gpa"
                                             value={formData.gpa}
                                             onChange={handleChange}
-                                            placeholder="GPA / Percentage"
+                                            placeholder="GPA / Percentage (e.g., 3.5/4.0 or 85%)"
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         />
                                     </div>
@@ -217,19 +266,21 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             onChange={handleChange}
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         >
-                                            <option value="">English Test</option>
-                                            <option value="IELTS">IELTS</option>
-                                            <option value="TOEFL">TOEFL</option>
-                                            <option value="PTE">PTE</option>
-                                            <option value="Duolingo">Duolingo</option>
-                                            <option value="Not Taken">Not Taken Yet</option>
+                                            <option value="">English Proficiency Test</option>
+                                            <option value="IELTS">IELTS (Academic)</option>
+                                            <option value="TOEFL">TOEFL iBT</option>
+                                            <option value="PTE">PTE Academic</option>
+                                            <option value="Duolingo">Duolingo English Test</option>
+                                            <option value="Cambridge">Cambridge English (CAE/CPE)</option>
+                                            <option value="Planning">Planning to Take Soon</option>
+                                            <option value="Not Required">Not Required/Native Speaker</option>
                                         </select>
                                         <input
                                             type="text"
                                             name="englishScore"
                                             value={formData.englishScore}
                                             onChange={handleChange}
-                                            placeholder="English Test Score"
+                                            placeholder="Score (e.g., 7.5 for IELTS, 100 for TOEFL)"
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         />
                                         <select
@@ -238,18 +289,21 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             onChange={handleChange}
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         >
-                                            <option value="">GRE/GMAT</option>
-                                            <option value="GRE">GRE</option>
-                                            <option value="GMAT">GMAT</option>
-                                            <option value="Not Required">Not Required</option>
-                                            <option value="Not Taken">Not Taken Yet</option>
+                                            <option value="">Graduate Entrance Test</option>
+                                            <option value="GRE">GRE (Graduate Record Exam)</option>
+                                            <option value="GMAT">GMAT (Business Schools)</option>
+                                            <option value="SAT">SAT (Undergraduate)</option>
+                                            <option value="ACT">ACT (Undergraduate)</option>
+                                            <option value="Planning">Planning to Take</option>
+                                            <option value="Not Required">Not Required for My Program</option>
+                                            <option value="Waived">Score Requirement Waived</option>
                                         </select>
                                         <input
                                             type="text"
                                             name="greGmatScore"
                                             value={formData.greGmatScore}
                                             onChange={handleChange}
-                                            placeholder="GRE/GMAT Score"
+                                            placeholder="Score (e.g., 320 for GRE, 700 for GMAT)"
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         />
                                     </div>
@@ -266,7 +320,7 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             name="interestedCourse"
                                             value={formData.interestedCourse}
                                             onChange={handleChange}
-                                            placeholder="Interested Course *"
+                                            placeholder="Interested Program/Major *"
                                             required
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         />
@@ -278,10 +332,12 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         >
                                             <option value="">Degree Level *</option>
-                                            <option value="Bachelor's">Bachelor's</option>
-                                            <option value="Master's">Master's</option>
-                                            <option value="PhD">PhD</option>
-                                            <option value="Diploma">Diploma</option>
+                                            <option value="Foundation">Foundation/Pathway Program</option>
+                                            <option value="Undergraduate">Undergraduate (Bachelor's)</option>
+                                            <option value="Postgraduate">Postgraduate (Master's)</option>
+                                            <option value="PhD">Doctoral (PhD)</option>
+                                            <option value="Diploma">Diploma/Certificate</option>
+                                            <option value="Associate">Associate Degree</option>
                                         </select>
                                         <select
                                             name="preferredIntake"
@@ -291,10 +347,12 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         >
                                             <option value="">Preferred Intake *</option>
-                                            <option value="Fall 2024">Fall 2024</option>
-                                            <option value="Spring 2025">Spring 2025</option>
-                                            <option value="Fall 2025">Fall 2025</option>
-                                            <option value="Not Decided">Not Decided Yet</option>
+                                            <option value="January 2025">January 2025 (Spring)</option>
+                                            <option value="May 2025">May 2025 (Summer)</option>
+                                            <option value="September 2025">September 2025 (Fall)</option>
+                                            <option value="January 2026">January 2026 (Spring)</option>
+                                            <option value="September 2026">September 2026 (Fall)</option>
+                                            <option value="Flexible">Flexible/Not Sure Yet</option>
                                         </select>
                                         <select
                                             name="budgetRange"
@@ -302,11 +360,14 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             onChange={handleChange}
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         >
-                                            <option value="">Budget Range (USD)</option>
-                                            <option value="<20k">Less than $20,000</option>
-                                            <option value="20k-40k">$20,000 - $40,000</option>
-                                            <option value="40k-60k">$40,000 - $60,000</option>
-                                            <option value=">60k">More than $60,000</option>
+                                            <option value="">Annual Budget (USD)</option>
+                                            <option value="<10k">Under $10,000</option>
+                                            <option value="10k-20k">$10,000 - $20,000</option>
+                                            <option value="20k-30k">$20,000 - $30,000</option>
+                                            <option value="30k-50k">$30,000 - $50,000</option>
+                                            <option value="50k-70k">$50,000 - $70,000</option>
+                                            <option value=">70k">Above $70,000</option>
+                                            <option value="Scholarship">Seeking Full Scholarship</option>
                                         </select>
                                     </div>
                                 </div>
