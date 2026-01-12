@@ -5,6 +5,12 @@ import { useState } from 'react';
 import heroImage from '../assets/images/hero_education_international_1767878831868.png';
 import ctaBackground from '../assets/images/cta_background_cinematic.png';
 import BackgroundElements from '../components/BackgroundElements';
+import usaUniversity from '../assets/images/usa_university.png';
+import ukUniversity from '../assets/images/uk_university.png';
+import canadaUniversity from '../assets/images/canada_university.png';
+import australiaUniversity from '../assets/images/australia_university.png';
+import irelandUniversity from '../assets/images/ireland_university.png';
+import europeUniversity from '../assets/images/europe_university.png';
 
 
 const Home = () => {
@@ -292,42 +298,42 @@ const Home = () => {
                                 name: 'United States',
                                 count: '200+ Universities',
                                 highlight: 'Ivy League, STEM Designated Programs',
-                                image: '/src/assets/images/usa_study_destination_1767878848400.png'
+                                image: usaUniversity
                             },
                             {
                                 code: 'GB',
                                 name: 'United Kingdom',
                                 count: '100+ Universities',
                                 highlight: 'Russell Group & Research Excellence',
-                                image: '/src/assets/images/uk_study_destination_1767878865705.png'
+                                image: ukUniversity
                             },
                             {
                                 code: 'CA',
                                 name: 'Canada',
                                 count: '80+ Universities',
                                 highlight: 'Post-Graduation Pathways & Quality Life',
-                                image: '/src/assets/images/canada_study_destination_1767878895785.png'
+                                image: canadaUniversity
                             },
                             {
                                 code: 'AU',
                                 name: 'Australia',
                                 count: '60+ Universities',
                                 highlight: 'Career & Migration Opportunities',
-                                image: '/src/assets/images/australia_study_destination_1767878913275.png'
+                                image: australiaUniversity
                             },
                             {
                                 code: 'IE',
                                 name: 'Ireland',
                                 count: '30+ Universities',
                                 highlight: '2-Year Post-Study Work Permit',
-                                image: '/src/assets/images/uk_study_destination_1767878865705.png'
+                                image: irelandUniversity
                             },
                             {
                                 code: 'EU',
                                 name: 'Europe',
                                 count: '150+ Universities',
                                 highlight: 'Affordable Tuition & Cultural Diversity',
-                                image: '/src/assets/images/europe_study_destination_1767878934797.png'
+                                image: europeUniversity
                             },
                         ].map((dest, index) => (
                             <motion.div
