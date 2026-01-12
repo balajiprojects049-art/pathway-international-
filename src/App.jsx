@@ -17,6 +17,8 @@ import CountryCanada from './pages/CountryCanada';
 import CountryEurope from './pages/CountryEurope';
 import CountryIreland from './pages/CountryIreland';
 import CountryUK from './pages/CountryUK';
+import CountryNewZealand from './pages/CountryNewZealand';
+import CountryGermany from './pages/CountryGermany';
 
 import SmoothScroll from './components/SmoothScroll';
 
@@ -53,6 +55,8 @@ function App() {
             <Route path="/country/australia" element={<CountryAustralia />} />
             <Route path="/country/ireland" element={<CountryIreland />} />
             <Route path="/country/europe" element={<CountryEurope />} />
+            <Route path="/country/new-zealand" element={<CountryNewZealand />} />
+            <Route path="/country/germany" element={<CountryGermany />} />
           </Routes>
           <Footer />
         </div>
