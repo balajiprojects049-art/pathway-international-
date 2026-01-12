@@ -31,11 +31,12 @@ const Navigation = () => {
 
     const studyAbroadLinks = [
         { name: 'USA', path: '/country/usa', icon: '🇺🇸' },
-        { name: 'UK', path: '/country/uk', icon: '🇬🇧' },
         { name: 'Canada', path: '/country/canada', icon: '🇨🇦' },
+        { name: 'UK', path: '/country/uk', icon: '🇬🇧' },
         { name: 'Australia', path: '/country/australia', icon: '🇦🇺' },
+        { name: 'New Zealand', path: '/country/new-zealand', icon: '🇳🇿' },
+        { name: 'Germany', path: '/country/germany', icon: '🇩🇪' },
         { name: 'Ireland', path: '/country/ireland', icon: '🇮🇪' },
-        { name: 'Europe', path: '/country/europe', icon: '🇪🇺' },
     ];
 
     const isActive = (path) => location.pathname === (path === '/' && location.pathname !== '/' ? false : path);
