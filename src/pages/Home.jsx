@@ -300,56 +300,64 @@ const Home = () => {
                                 name: 'United States',
                                 count: '200+ Universities',
                                 highlight: 'Ivy League, STEM Designated Programs',
-                                image: usaUniversity
+                                image: usaUniversity,
+                                path: '/country/usa'
                             },
                             {
                                 code: 'CA',
                                 name: 'Canada',
                                 count: '80+ Universities',
                                 highlight: 'Post-Graduation Pathways & Quality Life',
-                                image: canadaUniversity
+                                image: canadaUniversity,
+                                path: '/country/canada'
                             },
                             {
                                 code: 'GB',
                                 name: 'United Kingdom',
                                 count: '100+ Universities',
                                 highlight: 'Russell Group & Research Excellence',
-                                image: ukUniversity
+                                image: ukUniversity,
+                                path: '/country/uk'
                             },
                             {
                                 code: 'AU',
                                 name: 'Australia',
                                 count: '60+ Universities',
                                 highlight: 'Career & Migration Opportunities',
-                                image: australiaUniversity
+                                image: australiaUniversity,
+                                path: '/country/australia'
                             },
                             {
                                 code: 'NZ',
                                 name: 'New Zealand',
                                 count: '40+ Universities',
                                 highlight: 'High-Quality Education & Natural Beauty',
-                                image: newZealandUniversity
+                                image: newZealandUniversity,
+                                path: '/country/new-zealand'
                             },
                             {
                                 code: 'DE',
                                 name: 'Germany',
                                 count: '100+ Universities',
                                 highlight: 'Tuition-Free Public Universities & Innovation',
-                                image: germanyUniversity
+                                image: germanyUniversity,
+                                path: '/country/germany'
                             },
                             {
                                 code: 'IE',
                                 name: 'Ireland',
                                 count: '30+ Universities',
                                 highlight: '2-Year Post-Study Work Permit',
-                                image: irelandUniversity
+                                image: irelandUniversity,
+                                path: '/country/ireland'
                             },
                             {
                                 code: 'EU',
                                 name: 'Europe',
                                 count: '150+ Universities',
                                 highlight: 'Affordable Tuition & Cultural Diversity',
-                                image: europeUniversity
+                                image: europeUniversity,
+                                path: '/country/europe'
                             },
                         ].map((dest, index) => (
                             <motion.div
@@ -423,7 +431,7 @@ const Home = () => {
                                             </div>
 
                                             {/* Elegant CTA Button */}
-                                            <Link to="/destinations">
+                                            <Link to={dest.path}>
                                                 <motion.button
                                                     whileHover={{ scale: 1.02 }}
                                                     whileTap={{ scale: 0.98 }}
