@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import StudentInquiryForm from '../components/StudentInquiryForm';
 import heroAustralia from '../assets/images/hero_australia_premium.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
 
 const CountryAustralia = () => {
+    const [isFormOpen, setIsFormOpen] = useState(false);
     const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     const topUniversities = [
@@ -269,18 +272,27 @@ const CountryAustralia = () => {
                         <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                             Your future starts here. Apply to top Australian universities with our expert guidance.
                         </p>
-                        <Link to="/book-consultation">
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="px-12 py-5 bg-white text-brand-purple rounded-full font-bold text-lg shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all border border-white/50"
-                            >
-                                Begin Your Application
-                            </motion.button>
-                        </Link>
+                        <motion.button
+                            onClick={() => setIsFormOpen(true)}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="mx-auto px-12 py-5 bg-white/95 backdrop-blur-md text-brand-purple rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all border border-white/50 flex items-center gap-3"
+                        >
+                            <span>Apply Now</span>
+                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </motion.button>
                     </motion.div>
                 </div>
             </section>
+
+            {/* Student Inquiry Form Modal */}
+            <StudentInquiryForm
+                isOpen={isFormOpen}
+                onClose={() => setIsFormOpen(false)}
+                country="Australia"
+            />
         </div>
     );
 };
