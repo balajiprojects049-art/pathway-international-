@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const StudentInquiryForm = ({ isOpen, onClose, country }) => {
@@ -37,6 +37,39 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
 
+    // Comprehensive body scroll lock when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            // Save current scroll position
+            const scrollY = window.scrollY;
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+            // Lock body scroll and prevent layout shift
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
+            document.body.style.overflow = 'hidden';
+
+            // Compensate for scrollbar width to prevent layout shift
+            if (scrollbarWidth > 0) {
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
+            }
+
+            // Cleanup function
+            return () => {
+                // Restore scroll position
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+
+                // Restore scroll position without jump
+                window.scrollTo(0, scrollY);
+            };
+        }
+    }, [isOpen]);
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -74,7 +107,9 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
     return (
         <AnimatePresence>
             {isOpen && (
-                <div className="fixed inset-0 z-50 overflow-y-auto">
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center p-4"
+                >
                     {/* Backdrop */}
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -84,26 +119,40 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                         className="fixed inset-0 bg-black/60 backdrop-blur-sm"
                     />
 
-                    {/* Modal */}
-                    <div className="flex min-h-full items-center justify-center p-4">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                            className="relative w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-8 md:p-10"
+                    {/* Modal Container */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                        onClick={(e) => e.stopPropagation()}
+                        className="relative w-full max-w-4xl bg-white rounded-3xl shadow-2xl z-10 flex flex-col"
+                        style={{
+                            maxHeight: '90vh',
+                            height: 'auto'
+                        }}
+                    >
+                        {/* Close Button - Fixed position */}
+                        <button
+                            onClick={onClose}
+                            className="absolute top-6 right-6 z-20 text-gray-400 hover:text-gray-600 transition-colors bg-white rounded-full p-1 shadow-md"
+                            aria-label="Close form"
                         >
-                            {/* Close Button */}
-                            <button
-                                onClick={onClose}
-                                className="absolute top-6 right-6 text-gray-400 hover:text-gray-600 transition-colors"
-                            >
-                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
+                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
 
+                        {/* Scrollable Content */}
+                        <div
+                            className="overflow-y-auto p-8 md:p-10 flex-1 min-h-0"
+                            onWheel={(e) => e.stopPropagation()}
+                            onTouchMove={(e) => e.stopPropagation()}
+                            style={{
+                                WebkitOverflowScrolling: 'touch'
+                            }}
+                        >
                             {/* Header */}
-                            <div className="mb-8">
+                            <div className="mb-8 pr-8">
                                 <h2 className="text-3xl md:text-4xl font-display font-bold text-navy-muted mb-2">
                                     Start Your Journey to <span className="text-brand-purple">{country}</span>
                                 </h2>
@@ -415,11 +464,11 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                     </button>
                                 </div>
                             </form>
-                        </motion.div>
-                    </div>
+                        </div>
+                    </motion.div>
                 </div>
             )}
-        </AnimatePresence>
+        </AnimatePresence >
     );
 };
 

@@ -291,7 +291,7 @@ const CountryUSA = () => {
                             onClick={() => setIsFormOpen(true)}
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="px-10 py-5 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-brand-purple/50 transition-all duration-300 flex items-center gap-3"
+                            className="mx-auto px-10 py-5 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-brand-purple/50 transition-all duration-300 flex items-center gap-3"
                         >
                             <span>Apply Now</span>
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
