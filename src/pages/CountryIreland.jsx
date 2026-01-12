@@ -19,11 +19,11 @@ const CountryIreland = () => {
     ];
 
     const whyStudyPoints = [
-        { title: "Silicon Valley of Europe", desc: "Headquarters for Google, Facebook, Apple, and Pfizer." },
+        { title: "Europe's Technology Hub", desc: "Headquarters for Google, Facebook, Apple, and Pfizer." },
         { title: "English Speaking", desc: "The only English-speaking country in the Eurozone." },
-        { title: "Post-Study Work", desc: "2-year stay-back visa for Master's graduates." },
+        { title: "Post-Study Work", desc: "2-Year Post-Study Work Visa for Master's graduates." },
         { title: "Friendly & Safe", desc: "Voted one of the friendliest countries in the world." },
-        { title: "Education Excellence", desc: "One of the best education systems globally." },
+        { title: "Education Excellence", desc: "Globally Renowned Education System." },
         { title: "Research & Innovation", desc: "Leading hub for Tech, Pharma, and Finance." }
     ];
 
@@ -36,7 +36,7 @@ const CountryIreland = () => {
     const stats = [
         { label: "Universities", value: "30+" },
         { label: "Tech Hubs", value: "1000+" },
-        { label: "Post-Study Work", value: "2 Yrs" },
+        { label: "Post-Study Visa", value: "2 Yrs" },
         { label: "Language", value: "English" }
     ];
 
@@ -231,7 +231,7 @@ const CountryIreland = () => {
                                     <span className="text-green-500 font-bold">✓</span> Admission Letter
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> Proof of Fees Payment (Total)
+                                    <span className="text-green-500 font-bold">✓</span> Proof of Full Tuition Payment
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
                                     <span className="text-green-500 font-bold">✓</span> Funds for Living Expenses
@@ -275,7 +275,7 @@ const CountryIreland = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="px-12 py-5 bg-white text-brand-purple rounded-full font-bold text-lg shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all border border-white/50"
                             >
-                                Start Your Application Now
+                                Begin Your Application
                             </motion.button>
                         </Link>
                     </motion.div>

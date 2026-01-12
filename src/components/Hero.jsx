@@ -89,7 +89,7 @@ const Hero = () => {
                                 className="px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all inline-flex items-center justify-center"
                             >
                                 <span className="mr-2">📅</span>
-                                Book Free Consultation
+                                Schedule Consultation
                             </motion.a>
 
                             <motion.a

@@ -147,12 +147,28 @@ const AboutUs = () => {
                             Our Core Values
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light">
-                            The principles that guide everything we do
+                            The principles that guide our commitment to your success
                         </p>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        {values.map((value, index) => (
+                        {[
+                            {
+                                title: 'Excellence',
+                                description: ' committed to the highest standards in educational consulting',
+                                icon: '⭐',
+                            },
+                            {
+                                title: 'Integrity',
+                                description: 'Transparent, honest guidance throughout your entire journey',
+                                icon: '🤝',
+                            },
+                            {
+                                title: 'Global Vision',
+                                description: 'International perspective combined with local market expertise',
+                                icon: '🌍',
+                            },
+                        ].map((value, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
@@ -183,8 +199,8 @@ const AboutUs = () => {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { city: 'London', address: '45 Oxford Street, W1D 2DU', country: '🇬🇧' },
                             { city: 'New York', address: '350 Fifth Avenue, NY 10118', country: '🇺🇸' },
+                            { city: 'London', address: '45 Oxford Street, W1D 2DU', country: '🇬🇧' },
                             { city: 'Dubai', address: 'Business Bay, UAE', country: '🇦🇪' },
                         ].map((office, index) => (
                             <motion.div
@@ -233,7 +249,7 @@ const AboutUs = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="px-12 py-5 bg-white text-brand-purple rounded-full font-bold text-lg shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all border border-white/50"
                             >
-                                Book Your Free Consultation
+                                Schedule Your Complimentary Consultation
                             </motion.button>
                         </Link>
                     </motion.div>

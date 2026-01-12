@@ -45,7 +45,7 @@ const Contact = () => {
                         Start Your <span className="text-brand-purple">Journey</span> Today
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Book a free consultation with our expert counselors and take the first step towards your global education.
+                        Schedule a complimentary consultation with our expert counselors and take the first step towards your global education.
                     </p>
                 </motion.div>
 
@@ -224,7 +224,7 @@ const Contact = () => {
                                     whileTap={{ scale: 0.98 }}
                                     className="w-full px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
                                 >
-                                    📅 Book Free Consultation
+                                    📅 Schedule Consultation
                                 </motion.button>
                             </div>
                         </form>

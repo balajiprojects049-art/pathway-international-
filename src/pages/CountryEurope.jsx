@@ -20,9 +20,9 @@ const CountryEurope = () => {
 
     const whyStudyPoints = [
         { title: "Schengen Access", desc: "One visa grants you access to travel across 27+ European countries." },
-        { title: "Affordable Education", desc: "Many public universities in Germany & France offer low/no tuition fees." },
+        { title: "Affordable Education", desc: "Many public universities in Germany & France offer minimal or no tuition fees." },
         { title: "Diverse Culture", desc: "Immerse yourself in centuries of history, art, and diverse languages." },
-        { title: "English Programs", desc: "THousands of Master's degrees taught entirely in English." },
+        { title: "English Programs", desc: "Thousands of Master's degrees taught entirely in English." },
         { title: "Innovation Hub", desc: "Home to leading industries in Engineering, Automotive, and Fashion." },
         { title: "Quality of Life", desc: "Excellent public transport, healthcare, and work-life balance." }
     ];
@@ -36,7 +36,7 @@ const CountryEurope = () => {
     const stats = [
         { label: "Countries", value: "27+" },
         { label: "Universities", value: "1000+" },
-        { label: "Tuition Cost", value: "Low/Free" },
+        { label: "Tuition Cost", value: "Minimal/Free" },
         { label: "Visa Type", value: "Schengen" }
     ];
 
@@ -231,13 +231,13 @@ const CountryEurope = () => {
                                     <span className="text-green-500 font-bold">✓</span> Valid Passport & Photos
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> Blocking Account (Germany)
+                                    <span className="text-green-500 font-bold">✓</span> Blocked Account (Sperrkonto)
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
                                     <span className="text-green-500 font-bold">✓</span> Travel Insurance
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> Admission Letter
+                                    <span className="text-green-500 font-bold">✓</span> Letter of Admission
                                 </li>
                             </ul>
                         </div>
@@ -275,7 +275,7 @@ const CountryEurope = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="px-12 py-5 bg-white text-brand-purple rounded-full font-bold text-lg shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all border border-white/50"
                             >
-                                Start Your Application Now
+                                Begin Your Application
                             </motion.button>
                         </Link>
                     </motion.div>

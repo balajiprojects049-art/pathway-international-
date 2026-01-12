@@ -10,8 +10,8 @@ const Process = () => {
     const steps = [
         {
             number: '1',
-            title: 'Free Consultation',
-            description: 'Book a free consultation with our expert counselors to discuss your goals and aspirations.',
+            title: 'Initial Consultation',
+            description: 'Schedule a complimentary consultation with our expert counselors to discuss your goals and aspirations.',
             icon: '📞',
         },
         {

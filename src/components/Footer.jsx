@@ -11,7 +11,7 @@ const Footer = () => {
                             Pathway Global
                         </div>
                         <p className="text-gray-400 leading-relaxed mb-4">
-                            Your trusted partner for overseas education, guiding students to achieve their dreams of studying at world-class universities.
+                            Your trusted partner for international education, empowering students to achieve their academic goals at world-class institutions.
                         </p>
                         <div className="flex gap-3">
                             {['F', 'I', 'L', 'T'].map((letter, index) => (
@@ -57,7 +57,7 @@ const Footer = () => {
 
                     {/* Contact */}
                     <div>
-                        <h3 className="text-lg font-bold mb-4">Contact Us</h3>
+                        <h3 className="text-lg font-bold mb-4">Contact</h3>
                         <ul className="space-y-3 text-gray-400">
                             <li className="flex items-start gap-2">
                                 <span>📧</span>
@@ -69,11 +69,11 @@ const Footer = () => {
                             </li>
                             <li className="flex items-start gap-2">
                                 <span>🏢</span>
-                                <span>London | New York | Dubai</span>
+                                <span>New York | London | Dubai</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span>⏰</span>
-                                <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+                                <span>Mon - Sat: 9:00 AM - 6:00 PM EST</span>
                             </li>
                         </ul>
                     </div>
@@ -81,7 +81,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-700 text-center text-gray-400">
-                    <p>© 2026 Pathway Global Education Consultancy. All rights reserved.</p>
+                    <p>© 2026 Pathway Global Educational Consulting. All rights reserved.</p>
                 </div>
             </div>
         </footer>

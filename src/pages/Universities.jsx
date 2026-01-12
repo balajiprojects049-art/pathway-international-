@@ -130,7 +130,7 @@ const Universities = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="px-12 py-5 bg-white text-navy-muted rounded-full font-bold text-lg shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all border border-white/50"
                             >
-                                Start Your Journey
+                                Schedule Consultation
                             </motion.button>
                         </Link>
                     </motion.div>

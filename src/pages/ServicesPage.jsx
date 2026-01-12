@@ -71,15 +71,15 @@ const ServicesPage = () => {
                             Our Success <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">in Numbers</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Proven track record of student success worldwide
+                            A proven track record of student placements worldwide
                         </p>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             { number: '10,000+', label: 'Students Placed', icon: '🎓' },
-                            { number: '98%', label: 'Visa Success Rate', icon: '✈️' },
-                            { number: '50+', label: 'Partner Universities', icon: '🏛️' },
+                            { number: '98%', label: 'Visa Approval Rate', icon: '✈️' },
+                            { number: '50+', label: 'Partner Institutions', icon: '🏛️' },
                             { number: '25+', label: 'Countries Covered', icon: '🌍' },
                         ].map((stat, index) => (
                             <motion.div
@@ -113,7 +113,7 @@ const ServicesPage = () => {
                             How We <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">Work</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            A streamlined process designed for your success
+                            A streamlined process designed for your academic success
                         </p>
                     </motion.div>
 
@@ -122,7 +122,7 @@ const ServicesPage = () => {
                             {
                                 step: '01',
                                 title: 'Initial Consultation',
-                                description: 'Free personalized counseling session to understand your goals, profile, and preferences',
+                                description: 'Complimentary personalized counseling session to understand your goals, profile, and preferences',
                                 duration: '1 hour'
                             },
                             {
@@ -134,25 +134,25 @@ const ServicesPage = () => {
                             {
                                 step: '03',
                                 title: 'Application Preparation',
-                                description: 'Complete support for essays, SOPs, LORs, and documentation',
+                                description: 'Comprehensive support for essays, SOPs, LORs, and documentation',
                                 duration: '2-4 weeks'
                             },
                             {
                                 step: '04',
                                 title: 'Submission & Follow-up',
-                                description: 'Timely application submission and regular follow-ups with universities',
+                                description: 'Timely application submission and regular communication with university admissions',
                                 duration: '1-2 weeks'
                             },
                             {
                                 step: '05',
                                 title: 'Visa Guidance',
-                                description: 'Expert assistance with visa documentation, mock interviews, and submission',
+                                description: 'Expert assistance with visa documentation, interview preparation, and submission',
                                 duration: '3-6 weeks'
                             },
                             {
                                 step: '06',
                                 title: 'Pre-Departure',
-                                description: 'Accommodation, travel, forex, and orientation support before you fly',
+                                description: 'Orientation covering accommodation, travel, and settling into your new country',
                                 duration: '2-3 weeks'
                             },
                         ].map((process, index) => (
@@ -196,7 +196,7 @@ const ServicesPage = () => {
                             Why Choose <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">Our Services</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            What sets us apart from other consultancies
+                            What sets us apart from other consulting firms
                         </p>
                     </motion.div>
 
@@ -204,33 +204,33 @@ const ServicesPage = () => {
                         {[
                             {
                                 icon: '⚡',
-                                title: 'Fast Processing',
-                                description: 'Quick turnaround times without compromising quality. Most applications processed within 48 hours.'
+                                title: 'Expedited Processing',
+                                description: 'Efficient turnaround times without compromising quality. Most applications processed within 48 hours.'
                             },
                             {
                                 icon: '🎯',
                                 title: 'Personalized Approach',
-                                description: 'No one-size-fits-all. Every student gets customized guidance based on their unique profile.'
+                                description: 'No one-size-fits-all. Every student receives customized guidance based on their unique profile.'
                             },
                             {
                                 icon: '💼',
                                 title: 'Expert Counselors',
-                                description: 'Team of certified counselors with 10+ years of experience in international education.'
+                                description: 'Team of certified counselors with over a decade of experience in international education.'
                             },
                             {
                                 icon: '🤝',
-                                title: 'End-to-End Support',
-                                description: 'From first consultation to landing abroad, we are with you at every step of the journey.'
+                                title: 'Comprehensive Support',
+                                description: 'From initial consultation to arrival, we are with you at every step of the journey.'
                             },
                             {
                                 icon: '💰',
                                 title: 'Transparent Pricing',
-                                description: 'No hidden charges. Clear pricing structure with flexible payment options available.'
+                                description: 'No hidden fees. Clear pricing structure with flexible payment options available.'
                             },
                             {
                                 icon: '🌟',
                                 title: 'Post-Landing Support',
-                                description: 'Our relationship doesn\'t end at the airport. We provide ongoing support even after you land.'
+                                description: 'Our relationship doesn\'t end at the airport. We provide ongoing support even after you arrive.'
                             },
                         ].map((benefit, index) => (
                             <motion.div
@@ -279,7 +279,7 @@ const ServicesPage = () => {
                             Ready to Start Your Journey?
                         </h2>
                         <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-white font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-                            Book a free consultation with our expert counselors today
+                            Schedule a complimentary consultation with our expert counselors today
                         </p>
                         <Link to="/book-consultation">
                             <motion.button
@@ -287,7 +287,7 @@ const ServicesPage = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="px-12 py-5 bg-white/95 backdrop-blur-md text-brand-purple rounded-full font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all inline-flex items-center gap-3 border border-white/50"
                             >
-                                <span>Book Free Consultation</span>
+                                <span>Schedule Consultation</span>
                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>

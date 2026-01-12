@@ -83,7 +83,7 @@ const Home = () => {
                                 className="inline-block mb-8"
                             >
                                 <span className="glass-card px-6 py-2.5 rounded-full text-sm font-semibold text-navy-muted border border-gold-accent/30">
-                                    🌍 Trusted by Students Worldwide Since 2010
+                                    🌍 Empowering Global Aspirations Since 2010
                                 </span>
                             </motion.div>
 
@@ -109,8 +109,8 @@ const Home = () => {
                                 transition={{ delay: 0.6, duration: 0.8 }}
                                 className="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed max-w-3xl font-medium drop-shadow-md"
                             >
-                                Expert guidance from our international offices. Transform your dreams into reality
-                                with personalized university selection, admissions, visa support, and scholarships.
+                                Strategic guidance from our global offices. Transform your academic potential into reality
+                                with personalized university selection, admissions strategy, and scholarship advisory.
                             </motion.p>
 
                             {/* CTA Buttons */}
@@ -127,7 +127,7 @@ const Home = () => {
                                         className="px-10 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-full font-semibold text-lg shadow-2xl transition-all inline-flex items-center justify-center cursor-pointer"
                                     >
                                         <span className="mr-2">📅</span>
-                                        Free Consultation
+                                        Complimentary Consultation
                                     </motion.div>
                                 </Link>
 
@@ -153,7 +153,12 @@ const Home = () => {
             <section ref={statsRef} className="py-20 bg-white">
                 <div className="container mx-auto px-4 md:px-8 lg:px-16">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {stats.map((stat, index) => (
+                        {[
+                            { number: '10,000+', label: 'Students Placed Globally' },
+                            { number: '50+', label: 'Partner Institutions' },
+                            { number: '15+', label: 'Countries Worldwide' },
+                            { number: '98%', label: 'Visa Approval Rate' },
+                        ].map((stat, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
@@ -191,7 +196,28 @@ const Home = () => {
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {highlights.map((item, index) => (
+                        {[
+                            {
+                                icon: '🌍',
+                                title: 'Global Presence',
+                                description: 'International offices in USA, UK, and Dubai',
+                            },
+                            {
+                                icon: '🎓',
+                                title: 'Top Institutions',
+                                description: 'Partnerships with Ivy League and Russell Group universities',
+                            },
+                            {
+                                icon: '💼',
+                                title: 'Strategic Counseling',
+                                description: 'Certified counselors with 10+ years of industry experience',
+                            },
+                            {
+                                icon: '✈️',
+                                title: 'Comprehensive Support',
+                                description: 'From application strategy to arrival and settlement',
+                            },
+                        ].map((item, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
@@ -246,10 +272,10 @@ const Home = () => {
                         </motion.div>
 
                         <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold text-white mb-8 leading-[1.1] tracking-tight">
-                            Study in the World's
+                            Pursue Your Education in
                             <br />
                             <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                                Leading Destinations
+                                Top Global Destinations
                             </span>
                         </h2>
 
@@ -265,42 +291,42 @@ const Home = () => {
                                 code: 'US',
                                 name: 'United States',
                                 count: '200+ Universities',
-                                highlight: 'Ivy League, Tech Hubs, Research Excellence',
+                                highlight: 'Ivy League, STEM Designated Programs',
                                 image: '/src/assets/images/usa_study_destination_1767878848400.png'
                             },
                             {
                                 code: 'GB',
                                 name: 'United Kingdom',
                                 count: '100+ Universities',
-                                highlight: 'Oxford, Cambridge, World-Class Education',
+                                highlight: 'Russell Group & Research Excellence',
                                 image: '/src/assets/images/uk_study_destination_1767878865705.png'
                             },
                             {
                                 code: 'CA',
                                 name: 'Canada',
                                 count: '80+ Universities',
-                                highlight: 'Immigration Benefits, Quality Education',
+                                highlight: 'Post-Graduation Pathways & Quality Life',
                                 image: '/src/assets/images/canada_study_destination_1767878895785.png'
                             },
                             {
                                 code: 'AU',
                                 name: 'Australia',
                                 count: '60+ Universities',
-                                highlight: 'Work Opportunities, Beach Lifestyle',
+                                highlight: 'Career & Migration Opportunities',
                                 image: '/src/assets/images/australia_study_destination_1767878913275.png'
                             },
                             {
                                 code: 'IE',
                                 name: 'Ireland',
                                 count: '30+ Universities',
-                                highlight: '2-Year Stay Back, Cultural Diversity',
+                                highlight: '2-Year Post-Study Work Permit',
                                 image: '/src/assets/images/uk_study_destination_1767878865705.png'
                             },
                             {
                                 code: 'EU',
                                 name: 'Europe',
                                 count: '150+ Universities',
-                                highlight: 'Affordable Tuition, Cultural Diversity',
+                                highlight: 'Affordable Tuition & Cultural Diversity',
                                 image: '/src/assets/images/europe_study_destination_1767878934797.png'
                             },
                         ].map((dest, index) => (
@@ -436,7 +462,7 @@ const Home = () => {
                             {[
                                 {
                                     step: '01',
-                                    title: 'Free Consultation',
+                                    title: 'Initial Consultation',
                                     desc: 'Meet with our expert counselors to discuss your goals, preferences, and academic background',
                                     align: 'right'
                                 },
@@ -654,7 +680,7 @@ const Home = () => {
                         {[
                             { q: 'When should I start my application process?', a: 'Ideally, start 12-18 months before your intended enrollment date to ensure ample time for applications, tests, and visa processing.' },
                             { q: 'Do you help with scholarships?', a: 'Yes! We provide comprehensive scholarship guidance and help you identify and apply for merit-based, need-based, and university-specific scholarships.' },
-                            { q: 'What is the cost of your services?', a: 'We offer free initial consultation. Our service packages are customized based on your needs, and we work on transparent pricing with no hidden costs.' },
+                            { q: 'What is the cost of your services?', a: 'We offer complimentary initial consultation. Our service packages are customized based on your needs, and we work on transparent pricing with no hidden costs.' },
                             { q: 'Can I apply to multiple universities?', a: 'Absolutely! We recommend applying to 5-8 universities to maximize your chances of admission and compare offers.' },
                             { q: 'What is your visa success rate?', a: 'We maintain a 98% visa success rate through meticulous documentation, expert guidance, and thorough interview preparation.' },
                         ].map((faq, index) => (
@@ -749,7 +775,7 @@ const Home = () => {
                             Ready to Begin Your Journey?
                         </h2>
                         <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-white font-light leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-                            Schedule a free consultation with our expert counselors today
+                            Schedule a complimentary consultation with our expert counselors today
                         </p>
                         <Link to="/book-consultation">
                             <motion.button
@@ -757,7 +783,7 @@ const Home = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="px-12 py-5 bg-white/95 backdrop-blur-md text-brand-purple rounded-full font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all inline-flex items-center gap-3 border border-white/50"
                             >
-                                <span>Book Your Free Session</span>
+                                <span>Request Complimentary Session</span>
                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>

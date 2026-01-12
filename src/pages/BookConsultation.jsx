@@ -57,13 +57,13 @@ const BookConsultation = () => {
                             transition={{ duration: 0.8 }}
                         >
                             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-navy-muted mb-6 leading-tight drop-shadow-lg" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.1)' }}>
-                                Book Your Free{' '}
+                                Request Your{' '}
                                 <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">
-                                    Consultation
+                                    Complimentary Consultation
                                 </span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed max-w-3xl drop-shadow-md">
-                                Schedule a personalized session with our expert counselors to discuss your study abroad goals
+                                Schedule a personalized strategy session with our expert counselors to map out your academic future
                             </p>
                         </motion.div>
                     </div>
@@ -79,7 +79,7 @@ const BookConsultation = () => {
                         <div className="glass-card p-10 md:p-12 rounded-3xl shadow-2xl">
                             <div className="mb-8 text-center">
                                 <h2 className="text-3xl font-display font-bold text-navy-muted mb-3">
-                                    Schedule Your Session
+                                    Secure Your Session
                                 </h2>
                                 <p className="text-gray-600">
                                     🔒 Your information is completely confidential and secure
@@ -216,11 +216,11 @@ const BookConsultation = () => {
                                     whileTap={{ scale: 0.98 }}
                                     className="w-full px-10 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all"
                                 >
-                                    📅 Confirm Free Consultation
+                                    📅 Confirm Request
                                 </motion.button>
 
                                 <p className="text-center text-sm text-gray-500 mt-4">
-                                    Our expert counselors will contact you within 24 hours to confirm your appointment
+                                    Our team will contact you within 24 hours to confirm your appointment
                                 </p>
                             </form>
                         </div>
@@ -235,7 +235,7 @@ const BookConsultation = () => {
                         {[
                             { icon: '🔒', title: 'Confidential', text: 'Your information is 100% secure' },
                             { icon: '👨‍🎓', title: 'Expert Counselors', text: 'Certified professionals with 10+ years' },
-                            { icon: '💯', title: 'Free of Charge', text: 'No hidden fees, completely free' },
+                            { icon: '💯', title: 'Complimentary Service', text: 'Transparent process, no hidden fees' },
                         ].map((item, index) => (
                             <div key={index} className="text-center">
                                 <div className="text-5xl mb-4">{item.icon}</div>

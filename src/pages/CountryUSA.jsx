@@ -81,7 +81,12 @@ const CountryUSA = () => {
             <section className="relative -mt-20 z-20 px-4 mb-20">
                 <div className="container mx-auto max-w-5xl">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {stats.map((stat, index) => (
+                        {[
+                            { label: "Universities", value: "4,000+" },
+                            { label: "Intl. Students", value: "1M+" },
+                            { label: "STEM OPT", value: "3 Years" },
+                            { label: "Avg. Starting Salary", value: "$75k+" }
+                        ].map((stat, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
@@ -105,14 +110,21 @@ const CountryUSA = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-center mb-16"
                     >
-                        <span className="text-brand-purple font-semibold tracking-wider uppercase">Why Choose USA</span>
+                        <span className="text-brand-purple font-semibold tracking-wider uppercase">Why Choose the USA</span>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mt-2">
-                            The Global Standard in Education
+                            The Global Standard in Higher Education
                         </h2>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {whyStudyPoints.map((point, index) => (
+                        {[
+                            { title: "World-Class Institutions", desc: "Home to a majority of the world's top-ranked universities and colleges." },
+                            { title: "Innovation & Research", desc: "Access state-of-the-art facilities and lead groundbreaking research projects." },
+                            { title: "Academic Flexibility", desc: "Customize your education with a vast array of majors, minors, and electives." },
+                            { title: "Career Acceleration", desc: "Leverage CPT & OPT for invaluable work experience with Fortune 500 companies." },
+                            { title: "Dynamic Campus Life", desc: "Immerse yourself in a diverse, multicultural environment and vibrant student activities." },
+                            { title: "Global Prestige", desc: "Earn a degree that is recognized, respected, and valued by employers worldwide." }
+                        ].map((point, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
@@ -197,28 +209,28 @@ const CountryUSA = () => {
                 </div>
             </section>
 
-            {/* Admission & Visa Info - Tab style layout idea, simplified to cards for now */}
+            {/* Admission & Visa Info */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4 md:px-8 lg:px-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         {/* Requirements */}
                         <div className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-3xl border border-blue-100 shadow-lg">
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                                <span className="w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center text-sm">01</span>
-                                Admission Requirements
+                                <span className="w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center text-sm shadow-md">01</span>
+                                Admissions Requirements
                             </h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> Strong Academic GPA
+                                    <span className="text-green-500 font-bold">✓</span> Strong Academic Records (GPA)
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> IELTS / TOEFL Scores
+                                    <span className="text-green-500 font-bold">✓</span> English Proficiency (TOEFL / IELTS)
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> GRE / GMAT (for Grad)
+                                    <span className="text-green-500 font-bold">✓</span> Standardized Tests (SAT/ACT/GRE/GMAT)
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> SOP & LORs
+                                    <span className="text-green-500 font-bold">✓</span> Statement of Purpose (SOP) & Letters of Recommendation
                                 </li>
                             </ul>
                         </div>
@@ -226,21 +238,21 @@ const CountryUSA = () => {
                         {/* Visa */}
                         <div className="bg-gradient-to-br from-white to-purple-50 p-8 rounded-3xl border border-purple-100 shadow-lg">
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                                <span className="w-10 h-10 bg-brand-purple text-white rounded-full flex items-center justify-center text-sm">02</span>
-                                Visa Process (F-1)
+                                <span className="w-10 h-10 bg-brand-purple text-white rounded-full flex items-center justify-center text-sm shadow-md">02</span>
+                                F-1 Student Visa Process
                             </h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> Receive I-20 Form from Uni
+                                    <span className="text-green-500 font-bold">✓</span> Receive Form I-20 from Institution
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> Pay SEVIS Fee
+                                    <span className="text-green-500 font-bold">✓</span> Pay I-901 SEVIS Fee
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> Complete DS-160
+                                    <span className="text-green-500 font-bold">✓</span> Complete Form DS-160 Application
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> Attend Embassy Interview
+                                    <span className="text-green-500 font-bold">✓</span> Attend Consular Interview
                                 </li>
                             </ul>
                         </div>

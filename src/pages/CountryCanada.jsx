@@ -35,9 +35,9 @@ const CountryCanada = () => {
 
     const stats = [
         { label: "Universities", value: "96+" },
-        { label: "Intl. Students", value: "800k+" },
+        { label: "International Students", value: "800k+" },
         { label: "PGWP Duration", value: "3 Yrs" },
-        { label: "Avg Salary", value: "CAD 60k+" }
+        { label: "Avg. Starting Salary", value: "CAD 60k+" }
     ];
 
     return (
@@ -69,7 +69,7 @@ const CountryCanada = () => {
                             </h1>
                         </div>
                         <p className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-2xl drop-shadow-lg font-light">
-                            Discover your future in a land known for inclusivity, breathtaking landscapes, and academic excellence.
+                            Discover your future in a nation renowned for inclusivity, breathtaking landscapes, and academic excellence.
                         </p>
                     </motion.div>
                 </div>
@@ -212,7 +212,7 @@ const CountryCanada = () => {
                                     <span className="text-green-500 font-bold">✓</span> IELTS 6.0/6.5 Overall
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> Backlogs Summary (if any)
+                                    <span className="text-green-500 font-bold">✓</span> Academic History Review (if any gaps)
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
                                     <span className="text-green-500 font-bold">✓</span> SOP & LORs
@@ -275,7 +275,7 @@ const CountryCanada = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="px-12 py-5 bg-white text-brand-purple rounded-full font-bold text-lg shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all border border-white/50"
                             >
-                                Start Your Application Now
+                                Begin Your Application
                             </motion.button>
                         </Link>
                     </motion.div>

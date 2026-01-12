@@ -24,7 +24,7 @@ const CountryUK = () => {
         { title: "Cultural Hub", desc: "Experience a multicultural society with a rich history and global influence." },
         { title: "Research Excellence", desc: "Ranked 2nd in the world for science and research quality." },
         { title: "Post-Study Work", desc: "Graduate Route Visa allows you to work for 2 years after graduation." },
-        { title: "Health Benefits", desc: "Free medical treatment through the National Health Service (NHS)." }
+        { title: "Health Benefits", desc: "Access to comprehensive healthcare through the National Health Service (NHS)." },
     ];
 
     const popularCourses = [
@@ -35,9 +35,9 @@ const CountryUK = () => {
 
     const stats = [
         { label: "Universities", value: "160+" },
-        { label: "Intl. Students", value: "600k+" },
+        { label: "International Students", value: "600k+" },
         { label: "Masters Duration", value: "1 Year" },
-        { label: "Work Visa", value: "2 Yrs" }
+        { label: "Post-Study Visa", value: "2 Yrs" }
     ];
 
     return (
@@ -228,7 +228,7 @@ const CountryUK = () => {
                             </h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3 text-gray-700">
-                                    <span className="text-green-500 font-bold">✓</span> CAS Letter form University
+                                    <span className="text-green-500 font-bold">✓</span> CAS Letter from University
                                 </li>
                                 <li className="flex items-start gap-3 text-gray-700">
                                     <span className="text-green-500 font-bold">✓</span> Tuberculosis Test
@@ -275,7 +275,7 @@ const CountryUK = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="px-12 py-5 bg-white text-brand-purple rounded-full font-bold text-lg shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all border border-white/50"
                             >
-                                Start Your UK Journey
+                                Begin Your UK Journey
                             </motion.button>
                         </Link>
                     </motion.div>

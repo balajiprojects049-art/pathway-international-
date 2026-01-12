@@ -24,9 +24,9 @@ const Navigation = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'About Us', path: '/about' },
+        { name: 'About', path: '/about' },
         { name: 'Services', path: '/services' },
-        { name: 'Contact Us', path: '/contact' },
+        { name: 'Contact', path: '/contact' },
     ];
 
     const studyAbroadLinks = [
@@ -140,7 +140,7 @@ const Navigation = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="px-6 py-2.5 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-full font-medium shadow-lg transition-all cursor-pointer"
                             >
-                                Book Consultation
+                                Schedule Consultation
                             </motion.div>
                         </Link>
                     </div>

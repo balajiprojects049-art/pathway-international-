@@ -38,13 +38,13 @@ const ContactUs = () => {
                             transition={{ duration: 0.8 }}
                         >
                             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-navy-muted mb-6 leading-tight drop-shadow-lg" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.1)' }}>
-                                Get In{' '}
+                                Contact{' '}
                                 <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">
-                                    Touch
+                                    Our Team
                                 </span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed max-w-3xl drop-shadow-md">
-                                Reach out to our global offices or send us a message - we're here to help
+                                Connect with our international offices or submit an inquiry - we are here to assist you
                             </p>
                         </motion.div>
                     </div>

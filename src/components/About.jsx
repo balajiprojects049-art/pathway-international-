@@ -41,7 +41,7 @@ const About = () => {
                     className="text-center mb-16"
                 >
                     <span className="text-brand-purple font-semibold text-sm uppercase tracking-wider">
-                        About Us
+                        Who We Are
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
                         Your Trusted Global <span className="text-brand-purple">Education Partner</span>
