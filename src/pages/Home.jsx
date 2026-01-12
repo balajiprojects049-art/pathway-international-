@@ -10,6 +10,8 @@ import ukUniversity from '../assets/images/uk_university.png';
 import canadaUniversity from '../assets/images/canada_university.png';
 import australiaUniversity from '../assets/images/australia_university.png';
 import irelandUniversity from '../assets/images/ireland_university.png';
+import newZealandUniversity from '../assets/images/new_zealand_university.png';
+import germanyUniversity from '../assets/images/germany_university.png';
 import europeUniversity from '../assets/images/europe_university.png';
 
 
@@ -301,13 +303,6 @@ const Home = () => {
                                 image: usaUniversity
                             },
                             {
-                                code: 'GB',
-                                name: 'United Kingdom',
-                                count: '100+ Universities',
-                                highlight: 'Russell Group & Research Excellence',
-                                image: ukUniversity
-                            },
-                            {
                                 code: 'CA',
                                 name: 'Canada',
                                 count: '80+ Universities',
@@ -315,11 +310,32 @@ const Home = () => {
                                 image: canadaUniversity
                             },
                             {
+                                code: 'GB',
+                                name: 'United Kingdom',
+                                count: '100+ Universities',
+                                highlight: 'Russell Group & Research Excellence',
+                                image: ukUniversity
+                            },
+                            {
                                 code: 'AU',
                                 name: 'Australia',
                                 count: '60+ Universities',
                                 highlight: 'Career & Migration Opportunities',
                                 image: australiaUniversity
+                            },
+                            {
+                                code: 'NZ',
+                                name: 'New Zealand',
+                                count: '40+ Universities',
+                                highlight: 'High-Quality Education & Natural Beauty',
+                                image: newZealandUniversity
+                            },
+                            {
+                                code: 'DE',
+                                name: 'Germany',
+                                count: '100+ Universities',
+                                highlight: 'Tuition-Free Public Universities & Innovation',
+                                image: germanyUniversity
                             },
                             {
                                 code: 'IE',
