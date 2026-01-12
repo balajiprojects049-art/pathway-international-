@@ -9,40 +9,69 @@ const Services = () => {
 
     const services = [
         {
-            icon: '🎯',
-            title: 'University Selection',
-            description: 'Personalized guidance to find the perfect university match based on your profile, interests, and career goals.',
-            features: ['Profile Assessment', 'University Matching', 'Course Selection'],
+            icon: '👤',
+            title: 'Profile Analysis',
+            description: 'We evaluate your academic background, goals, and interests to recommend the best study destinations and courses suited for your career path.',
         },
         {
-            icon: '📝',
-            title: 'Admissions Support',
-            description: 'Complete application assistance including SOP writing, LOR guidance, and document preparation.',
-            features: ['Application Review', 'Essay Writing', 'Document Prep'],
+            icon: '🎓',
+            title: 'Career Counseling',
+            description: 'Expert advisors assess your interests and aspirations to guide you toward the most suitable courses, job trends, and skills needed for success.',
+        },
+        {
+            icon: '🏛️',
+            title: 'University Shortlisting',
+            description: 'We curate universities based on your academic profile, budget, and career preferences to help you make informed application decisions.',
+        },
+        {
+            icon: '🌍',
+            title: 'Scholarship Guidance',
+            description: 'We identify scholarships you qualify for and provide expert support in application preparation to increase your chances of securing financial aid.',
+        },
+        {
+            icon: '🎯',
+            title: 'Loan Assistance',
+            description: 'Our experts help you find suitable education loans, prepare documentation, and choose repayment plans that fit your financial needs.',
+        },
+        {
+            icon: '💰',
+            title: 'Financial Planning (Funds)',
+            description: 'We offer guidance on budgeting, saving, and organizing financial documentation to ensure smooth visa and admission processes.',
+        },
+        {
+            icon: '🎤',
+            title: 'Mock Interviews',
+            description: 'Practice sessions tailored to your university or visa interviews with personalized feedback to boost confidence and clarity.',
         },
         {
             icon: '✈️',
             title: 'Visa Assistance',
-            description: 'Expert visa counseling and documentation support to ensure smooth approval process.',
-            features: ['Visa Guidance', 'Mock Interviews', 'Documentation'],
+            description: 'Comprehensive visa guidance including documentation, form filling, and interview preparation for higher approval success.',
         },
         {
-            icon: '💰',
-            title: 'Scholarship Guidance',
-            description: 'Help you identify and apply for scholarships, grants, and financial aid opportunities.',
-            features: ['Scholarship Search', 'Application Help', 'Financial Planning'],
+            icon: '🧳',
+            title: 'Travel Guidance',
+            description: 'We assist with travel essentials like flight booking, insurance, luggage prep, and destination-specific travel tips.',
         },
         {
-            icon: '📚',
-            title: 'Test Preparation',
-            description: 'IELTS, TOEFL, GRE, GMAT preparation resources and guidance from expert instructors.',
-            features: ['Study Materials', 'Practice Tests', 'Expert Coaching'],
+            icon: '🏆',
+            title: 'Pre-Departure Guidance',
+            description: 'We prepare you for studying abroad with sessions on packing, cultural tips, safety advice, and essential preparations.',
         },
         {
             icon: '🏠',
-            title: 'Pre-Departure Support',
-            description: 'Accommodation assistance, travel planning, and orientation for a smooth transition abroad.',
-            features: ['Accommodation', 'Travel Planning', 'Orientation'],
+            title: 'Post-Arrival Guidance',
+            description: 'Support doesn\'t end at the airport. We help in accommodation, banking, and initial transportation setup for a smooth start.',
+        },
+        {
+            icon: '💼',
+            title: 'Part-Time Job Assistance',
+            description: 'We provide vital information on finding part-time jobs abroad, preparing resumes, and understanding work regulations for students.',
+        },
+        {
+            icon: '📞',
+            title: 'Ongoing Support',
+            description: 'Continuous guidance throughout your academic journey and beyond to help with study goals, career decisions, and academic help for post-study career excellence.',
         },
     ];
 
@@ -60,10 +89,10 @@ const Services = () => {
                         Our Services
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
-                        Comprehensive <span className="text-brand-purple">Support</span> Every Step
+                        Premium <span className="text-brand-purple">Services</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        From university selection to landing abroad, we provide end-to-end guidance for your study abroad journey.
+                        We provide complete end-to-end support for every step of your overseas education journey — from planning to landing and beyond.
                     </p>
                 </motion.div>
 
@@ -83,17 +112,9 @@ const Services = () => {
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-600 mb-4 leading-relaxed">
+                            <p className="text-gray-600 leading-relaxed">
                                 {service.description}
                             </p>
-                            <ul className="space-y-2">
-                                {service.features.map((feature, idx) => (
-                                    <li key={idx} className="flex items-center text-sm text-gray-700">
-                                        <span className="text-brand-purple mr-2">✓</span>
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
                         </motion.div>
                     ))}
                 </div>
