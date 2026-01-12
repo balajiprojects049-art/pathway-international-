@@ -37,7 +37,7 @@ const Navigation = () => {
         { name: 'New Zealand', path: '/country/new-zealand', icon: '🇳🇿' },
         { name: 'Germany', path: '/country/germany', icon: '🇩🇪' },
         { name: 'Ireland', path: '/country/ireland', icon: '🇮🇪' },
-        { name: 'Other Countries', path: '/destinations', icon: '🌍' },
+        { name: 'Other Countries', path: '/destinations', icon: 'OC' },
     ];
 
     const isActive = (path) => location.pathname === (path === '/' && location.pathname !== '/' ? false : path);

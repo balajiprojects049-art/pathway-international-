@@ -250,6 +250,106 @@ const ServicesPage = () => {
                 </div>
             </section>
 
+            {/* English Proficiency & Entrance Exams Section */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4 md:px-8 lg:px-16">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-4xl md:text-5xl font-display font-bold text-navy-muted mb-4">
+                            English Proficiency & <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">Entrance Exams</span>
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Prepare for globally recognized tests that open pathways to international education and career opportunities.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                        {[
+                            {
+                                name: 'IELTS',
+                                color: 'border-blue-500',
+                                description: 'The IELTS test measures English proficiency for study, migration, or work. Accepted by 11,000+ institutions worldwide.',
+                                details: [
+                                    'Score range: 0-9 bands',
+                                    'Has types: Academic & General',
+                                    'Duration: 2 hrs 45 mins'
+                                ]
+                            },
+                            {
+                                name: 'TOEFL',
+                                color: 'border-purple-500',
+                                description: 'TOEFL assesses academic English skills for university admission, focusing on reading, listening, speaking, and writing.',
+                                details: [
+                                    'Score range: 0-120',
+                                    'Accepted by 160+ countries',
+                                    'Duration: ~3 hours'
+                                ]
+                            },
+                            {
+                                name: 'GRE',
+                                color: 'border-indigo-500',
+                                description: 'GRE evaluates analytical writing, quantitative, and verbal reasoning — essential for graduate and business schools.',
+                                details: [
+                                    'Score range: 260-340',
+                                    'Sections: Verbal, Quant, Writing',
+                                    'Duration: ~3 hrs 45 mins'
+                                ]
+                            },
+                            {
+                                name: 'PTE',
+                                color: 'border-green-500',
+                                description: 'The PTE Academic test—fast as a scoring for accurate results, widely accepted for study and migration worldwide.',
+                                details: [
+                                    'Score range: 10-90',
+                                    'Fully computer-based test',
+                                    'Duration: 2 hrs'
+                                ]
+                            },
+                            {
+                                name: 'Duolingo',
+                                color: 'border-emerald-500',
+                                colSpan: true,
+                                description: 'A quick, affordable online English test that evaluates reading, writing, listening, and speaking — anytime, anywhere.',
+                                details: [
+                                    'Score range: 10-160',
+                                    'Takes less than 1 hour',
+                                    'Available 24/7 online'
+                                ]
+                            },
+                        ].map((exam, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1, duration: 0.5 }}
+                                className={`bg-white border-l-4 ${exam.color} rounded-xl p-6 shadow-md hover:shadow-lg transition-all ${exam.colSpan ? 'md:col-span-2' : ''}`}
+                            >
+                                <h3 className="text-2xl font-bold text-brand-purple mb-3">
+                                    {exam.name}
+                                </h3>
+                                <p className="text-gray-600 mb-4 leading-relaxed">
+                                    {exam.description}
+                                </p>
+                                <ul className="space-y-2">
+                                    {exam.details.map((detail, idx) => (
+                                        <li key={idx} className="flex items-start text-sm text-gray-700">
+                                            <span className="text-brand-purple mr-2 mt-0.5">•</span>
+                                            {detail}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Section with Parallax Background */}
             <section className="relative py-32 md:py-40 overflow-hidden">
                 {/* Fixed Parallax Background Image */}
