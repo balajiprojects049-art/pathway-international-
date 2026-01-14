@@ -62,7 +62,7 @@ const CountryEurope = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="max-w-4xl"
+                        className="max-w-4xl bg-black/20 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl"
                     >
                         <div className="flex items-center gap-4 mb-6">
                             <span className="text-6xl md:text-7xl">🇪🇺</span>

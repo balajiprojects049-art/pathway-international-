@@ -99,7 +99,7 @@ const Home = () => {
 
                 {/* Content */}
                 <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 py-20">
-                    <div className="max-w-4xl bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-white/20 shadow-2xl">
+                    <div className="max-w-4xl bg-black/20 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
                         <motion.div
                             ref={heroRef}
                             initial={{ opacity: 0, y: 30 }}
