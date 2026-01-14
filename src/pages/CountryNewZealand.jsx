@@ -105,7 +105,7 @@ const CountryNewZealand = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
-                                className="group p-8 rounded-2xl bg-gray-50 hover:bg-white border border-transparent hover:border-gray-100 hover:shadow-2xl transition-all duration-300"
+                                className="premium-card bg-gray-50 hover:bg-white p-8 rounded-2xl border border-transparent group"
                             >
                                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                                     <span className="text-2xl text-green-600">★</span>

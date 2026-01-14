@@ -164,11 +164,11 @@ const ServicesPage = () => {
                         ].map((process, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: index * 0.1, duration: 0.5 }}
-                                className="flex gap-6 items-start group"
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="premium-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group"
                             >
                                 <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gradient-to-br from-brand-purple to-brand-blue flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
                                     {process.step}

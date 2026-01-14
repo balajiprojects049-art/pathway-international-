@@ -743,7 +743,7 @@ const Home = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                                className="glass-card rounded-2xl overflow-hidden border border-gray-100"
+                                className="premium-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group"
                             >
                                 {/* Question Header - Clickable */}
                                 <button

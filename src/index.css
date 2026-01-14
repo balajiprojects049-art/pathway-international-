@@ -83,4 +83,23 @@ h3 {
   .text-gradient-brand {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-purple to-brand-blue;
   }
+
+  .premium-card {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  .premium-card:hover {
+    @apply -translate-y-2 shadow-2xl;
+    box-shadow: 0 25px 50px -12px rgba(109, 40, 217, 0.15); /* Purple tint shadow */
+  }
+
+  /* Upside Line Animation */
+  .premium-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brand-purple to-brand-blue transform scale-x-0 transition-transform duration-300 origin-left z-10;
+  }
+
+  .premium-card:hover::before {
+    @apply scale-x-100;
+  }
 }
