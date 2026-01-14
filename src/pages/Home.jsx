@@ -114,7 +114,7 @@ const Home = () => {
                                 className="inline-block mb-8"
                             >
                                 <span className="glass-card px-6 py-2.5 rounded-full text-sm font-semibold text-white border border-white/30 bg-white/10">
-                                    🌍 Empowering Global Aspirations Since 2010
+                                    🌍 Empowering Global Aspirations Since 2024
                                 </span>
                             </motion.div>
 
@@ -219,7 +219,7 @@ const Home = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-navy-muted mb-4">
-                            Why Choose Pathway Global
+                            Why Choose Pathway International
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light">
                             Excellence in international education consultancy
@@ -607,7 +607,7 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { name: 'Priya Sharma', uni: 'Harvard University, USA', quote: 'Pathway Global made my dream of studying at Harvard come true. Their guidance was invaluable!', rating: 5 },
+                            { name: 'Priya Sharma', uni: 'Harvard University, USA', quote: 'Pathway International made my dream of studying at Harvard come true. Their guidance was invaluable!', rating: 5 },
                             { name: 'Rahul Mehta', uni: 'University of Oxford, UK', quote: 'Professional, knowledgeable, and supportive throughout my entire journey. Highly recommended!', rating: 5 },
                             { name: 'Ananya Patel', uni: 'University of Toronto, Canada', quote: 'From application to visa, they handled everything perfectly. Now I\'m living my Canadian dream!', rating: 5 },
                         ].map((testimonial, index) => (

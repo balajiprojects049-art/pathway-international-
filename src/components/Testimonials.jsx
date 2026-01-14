@@ -12,7 +12,7 @@ const Testimonials = () => {
             name: 'Priya Sharma',
             university: 'Stanford University, USA',
             rating: 5,
-            text: "Pathway Global made my dream of studying at Stanford a reality. Their guidance throughout the application process was invaluable. Highly recommended!",
+            text: "Pathway International made my dream of studying at Stanford a reality. Their guidance throughout the application process was invaluable. Highly recommended!",
             avatar: '👩',
         },
         {
@@ -33,7 +33,7 @@ const Testimonials = () => {
             name: 'Arjun Reddy',
             university: 'University of Melbourne, Australia',
             rating: 5,
-            text: "From shortlisting universities to accommodation in Melbourne, they handled everything. Best decision to work with Pathway Global!",
+            text: "From shortlisting universities to accommodation in Melbourne, they handled everything. Best decision to work with Pathway International!",
             avatar: '👨',
         },
         {

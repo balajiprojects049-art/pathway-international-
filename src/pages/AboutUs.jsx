@@ -94,7 +94,7 @@ const AboutUs = () => {
                             </h2>
                             <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                                 <p>
-                                    Founded in 2010, Pathway Global was born from a simple vision: to make world-class
+                                    Founded in 2010, Pathway International was born from a simple vision: to make world-class
                                     education accessible to ambitious students everywhere.
                                 </p>
                                 <p>

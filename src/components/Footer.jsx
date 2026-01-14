@@ -8,7 +8,7 @@ const Footer = () => {
                     {/* Company Info */}
                     <div>
                         <div className="text-2xl font-bold bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent mb-4">
-                            Pathway Global
+                            Pathway International
                         </div>
                         <p className="text-gray-400 leading-relaxed mb-4">
                             Your trusted partner for international education, empowering students to achieve their academic goals at world-class institutions.
@@ -81,7 +81,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-700 text-center text-gray-400">
-                    <p>© 2026 Pathway Global Educational Consulting. All rights reserved.</p>
+                    <p>© 2026 Pathway International Educational Consulting. All rights reserved.</p>
                 </div>
             </div>
         </footer>

@@ -197,7 +197,7 @@ const Destinations = () => {
                         </div>
 
                         <div className="text-sm text-gray-600 mb-6">
-                            <strong>{selectedCountry.universities}</strong> partnered with Pathway Global
+                            <strong>{selectedCountry.universities}</strong> partnered with Pathway International
                         </div>
 
                         <button className="w-full px-8 py-3 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all">

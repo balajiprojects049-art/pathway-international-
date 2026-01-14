@@ -59,7 +59,7 @@ const Navigation = () => {
                             whileHover={{ scale: 1.05 }}
                             className="text-2xl md:text-3xl font-display font-bold bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent cursor-pointer"
                         >
-                            Pathway Global
+                            Pathway International
                         </motion.div>
                     </Link>
 
