@@ -129,13 +129,13 @@ const ServicesPage = () => {
                                 step: '02',
                                 title: 'University Shortlisting',
                                 description: 'Curated list of universities matching your profile, budget, and career aspirations',
-                                duration: '2-3 days'
+                                duration: '1-2 days'
                             },
                             {
                                 step: '03',
                                 title: 'Application Preparation',
                                 description: 'Comprehensive support for essays, SOPs, LORs, and documentation',
-                                duration: '2-4 weeks'
+                                duration: '1-2  weeks'
                             },
                             {
                                 step: '04',
@@ -145,15 +145,21 @@ const ServicesPage = () => {
                             },
                             {
                                 step: '05',
-                                title: 'Visa Guidance',
-                                description: 'Expert assistance with visa documentation, interview preparation, and submission',
-                                duration: '3-6 weeks'
+                                title: 'Attending the Interview',
+                                description: 'Comprehensive mock interviews and personalized coaching to ensure you face university interactions with confidence',
+                                duration: '2-3 weeks'
                             },
                             {
                                 step: '06',
+                                title: 'Visa Guidance',
+                                description: 'Expert assistance with visa documentation, interview preparation, and submission',
+                                duration: '2-3 weeks'
+                            },
+                            {
+                                step: '07',
                                 title: 'Pre-Departure',
                                 description: 'Orientation covering accommodation, travel, and settling into your new country',
-                                duration: '2-3 weeks'
+                                duration: '3-4 weeks'
                             },
                         ].map((process, index) => (
                             <motion.div
