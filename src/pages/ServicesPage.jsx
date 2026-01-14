@@ -32,20 +32,20 @@ const ServicesPage = () => {
 
                 {/* Content */}
                 <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 py-32">
-                    <div className="max-w-4xl bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-3xl">
+                    <div className="max-w-4xl bg-black/20 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
                         <motion.div
                             ref={heroRef}
                             initial={{ opacity: 0, y: 30 }}
                             animate={heroInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.8 }}
                         >
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-navy-muted mb-6 leading-tight drop-shadow-lg" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.1)' }}>
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 leading-tight drop-shadow-lg">
                                 Our{' '}
-                                <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">
+                                <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
                                     Services
                                 </span>
                             </h1>
-                            <p className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed max-w-3xl drop-shadow-md">
+                            <p className="text-xl md:text-2xl text-gray-200 font-medium leading-relaxed max-w-3xl drop-shadow-md">
                                 Comprehensive support for every step of your study abroad journey
                             </p>
                         </motion.div>
