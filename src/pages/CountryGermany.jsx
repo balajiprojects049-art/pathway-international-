@@ -2,7 +2,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import heroGermany from '../assets/images/germany_university.png';
+import HeroBackgroundSlider from '../components/HeroBackgroundSlider';
+import heroSlideGermany from '../assets/images/hero_slide_germany.png';
+import heroSlideGermany2 from '../assets/images/hero_slide_germany_2.png';
+import heroSlideGermany3 from '../assets/images/hero_slide_germany_3.png';
+import heroSlideGermany4 from '../assets/images/hero_slide_germany_4.png';
+import germanyUniversity from '../assets/images/germany_university.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
 import StudentInquiryForm from '../components/StudentInquiryForm';
 
@@ -14,12 +19,14 @@ const CountryGermany = () => {
         <div className="min-h-screen bg-gray-50">
             {/* Parallax Hero Section */}
             <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${heroGermany})`,
-                        backgroundAttachment: 'fixed',
-                    }}
+                <HeroBackgroundSlider
+                    images={[
+                        heroSlideGermany,
+                        heroSlideGermany2,
+                        heroSlideGermany3,
+                        heroSlideGermany4,
+                        germanyUniversity
+                    ]}
                 />
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />

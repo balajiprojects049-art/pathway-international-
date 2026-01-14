@@ -2,7 +2,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import HeroBackgroundSlider from '../components/HeroBackgroundSlider';
 import heroNewZealand from '../assets/images/new_zealand_university.png';
+import heroSlideNZ1 from '../assets/images/hero_slide_nz_1.jpg';
+import heroSlideNZ2 from '../assets/images/hero_slide_nz_2.jpg';
+import heroSlideNZ3 from '../assets/images/hero_slide_nz_3.jpg';
+import heroSlideNZ4 from '../assets/images/hero_slide_nz_4.jpg';
 import globalCtaImage from '../assets/images/global_cta_background.png';
 import StudentInquiryForm from '../components/StudentInquiryForm';
 
@@ -14,12 +19,14 @@ const CountryNewZealand = () => {
         <div className="min-h-screen bg-gray-50">
             {/* Parallax Hero Section */}
             <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${heroNewZealand})`,
-                        backgroundAttachment: 'fixed',
-                    }}
+                <HeroBackgroundSlider
+                    images={[
+                        heroNewZealand,
+                        heroSlideNZ1,
+                        heroSlideNZ2,
+                        heroSlideNZ3,
+                        heroSlideNZ4
+                    ]}
                 />
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />

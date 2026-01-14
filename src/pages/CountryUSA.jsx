@@ -2,7 +2,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import HeroBackgroundSlider from '../components/HeroBackgroundSlider';
 import heroUsa from '../assets/images/hero_usa_premium.png';
+import heroSlideUSA from '../assets/images/hero_slide_usa.png';
+import heroSlideUSA2 from '../assets/images/hero_slide_usa_2.png';
+import usaUniversity from '../assets/images/usa_university.png';
+import usaStudyDestination from '../assets/images/usa_study_destination_1767878848400.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
 import StudentInquiryForm from '../components/StudentInquiryForm';
 
@@ -49,15 +54,15 @@ const CountryUSA = () => {
         <div className="min-h-screen bg-gray-50">
             {/* Parallax Hero Section */}
             <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${heroUsa})`,
-                        backgroundAttachment: 'fixed',
-                    }}
+                <HeroBackgroundSlider
+                    images={[
+                        heroUsa,
+                        heroSlideUSA,
+                        heroSlideUSA2,
+                        usaUniversity,
+                        usaStudyDestination
+                    ]}
                 />
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
 
                 <div className="container mx-auto px-4 md:px-8 lg:px-16 h-full flex items-center relative z-10 pt-20">
                     <motion.div

@@ -2,13 +2,18 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import StudentInquiryForm from '../components/StudentInquiryForm';
+import HeroBackgroundSlider from '../components/HeroBackgroundSlider';
 import heroIreland from '../assets/images/hero_ireland_premium.png';
+import heroSlideIreland from '../assets/images/hero_slide_ireland.png';
+import heroSlideIreland2 from '../assets/images/hero_slide_ireland_2.png';
+import heroSlideIreland3 from '../assets/images/hero_slide_ireland_3.jpg';
+import irelandUniversity from '../assets/images/ireland_university.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
+import StudentInquiryForm from '../components/StudentInquiryForm';
 
 const CountryIreland = () => {
-    const [isFormOpen, setIsFormOpen] = useState(false);
     const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+    const [isFormOpen, setIsFormOpen] = useState(false);
 
     const topUniversities = [
         'Trinity College Dublin',
@@ -47,12 +52,13 @@ const CountryIreland = () => {
         <div className="min-h-screen bg-gray-50">
             {/* Parallax Hero Section */}
             <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${heroIreland})`,
-                        backgroundAttachment: 'fixed',
-                    }}
+                <HeroBackgroundSlider
+                    images={[
+                        heroIreland,
+                        heroSlideIreland,
+                        heroSlideIreland2,
+                        irelandUniversity
+                    ]}
                 />
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />

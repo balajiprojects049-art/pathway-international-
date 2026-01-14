@@ -3,7 +3,12 @@ import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import StudentInquiryForm from '../components/StudentInquiryForm';
+import HeroBackgroundSlider from '../components/HeroBackgroundSlider';
 import heroCanada from '../assets/images/hero_canada_premium.png';
+import heroSlideCanada from '../assets/images/hero_slide_canada.png';
+import heroSlideCanada2 from '../assets/images/hero_slide_canada_2.png';
+import canadaUniversity from '../assets/images/canada_university.png';
+import canadaStudyDestination from '../assets/images/canada_study_destination_1767878895785.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
 
 const CountryCanada = () => {
@@ -47,12 +52,14 @@ const CountryCanada = () => {
         <div className="min-h-screen bg-gray-50">
             {/* Parallax Hero Section */}
             <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${heroCanada})`,
-                        backgroundAttachment: 'fixed',
-                    }}
+                <HeroBackgroundSlider
+                    images={[
+                        heroCanada,
+                        heroSlideCanada,
+                        heroSlideCanada2,
+                        canadaUniversity,
+                        canadaStudyDestination
+                    ]}
                 />
                 <div className="absolute inset-0 bg-black/30" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
