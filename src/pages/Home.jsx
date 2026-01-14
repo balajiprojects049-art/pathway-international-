@@ -1,8 +1,12 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import heroImage from '../assets/images/hero_education_international_1767878831868.png';
+import { useState, useEffect } from 'react';
+import heroSlideUSA from '../assets/images/hero_slide_usa.png';
+import heroSlideUK from '../assets/images/hero_slide_uk.png';
+import heroSlideCanada from '../assets/images/hero_slide_canada.png';
+import heroSlideAustralia from '../assets/images/hero_slide_australia.png';
+import heroSlideGermany from '../assets/images/hero_slide_germany.png';
 import ctaBackground from '../assets/images/cta_background_cinematic.png';
 import BackgroundElements from '../components/BackgroundElements';
 import usaUniversity from '../assets/images/usa_university.png';
@@ -20,6 +24,22 @@ const Home = () => {
     const [statsRef, statsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
     const [featuresRef, featuresInView] = useInView({ triggerOnce: true, threshold: 0.1 });
     const [openFAQ, setOpenFAQ] = useState(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const heroSlides = [
+        heroSlideUSA,
+        heroSlideUK,
+        heroSlideCanada,
+        heroSlideAustralia,
+        heroSlideGermany
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, [heroSlides.length]);
 
 
     const stats = [
@@ -56,27 +76,30 @@ const Home = () => {
         <div className="min-h-screen bg-gradient-luxury">
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-                {/* Background Image with Parallax */}
-                <motion.div
-                    initial={{ scale: 1.1 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 1.5 }}
-                    className="absolute inset-0 z-0"
-                >
-                    <div
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{
-                            backgroundImage: `url(${heroImage})`,
-                            backgroundAttachment: 'fixed',
-                        }}
-                    />
-                </motion.div>
+                {/* Background Image Slideshow */}
+                <div className="absolute inset-0 z-0">
+                    <AnimatePresence mode="popLayout">
+                        <motion.div
+                            key={currentSlide}
+                            initial={{ opacity: 0, scale: 1.1 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 1.5 }}
+                            className="absolute inset-0 bg-cover bg-center"
+                            style={{
+                                backgroundImage: `url(${heroSlides[currentSlide]})`,
+                            }}
+                        />
+                    </AnimatePresence>
+                    {/* Overlay for better text readability */}
+                    <div className="absolute inset-0 bg-black/40" />
+                </div>
 
                 <BackgroundElements />
 
                 {/* Content */}
                 <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10 py-20">
-                    <div className="max-w-4xl bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-3xl">
+                    <div className="max-w-4xl bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-white/20 shadow-2xl">
                         <motion.div
                             ref={heroRef}
                             initial={{ opacity: 0, y: 30 }}
@@ -90,7 +113,7 @@ const Home = () => {
                                 transition={{ delay: 0.2, duration: 0.6 }}
                                 className="inline-block mb-8"
                             >
-                                <span className="glass-card px-6 py-2.5 rounded-full text-sm font-semibold text-navy-muted border border-gold-accent/30">
+                                <span className="glass-card px-6 py-2.5 rounded-full text-sm font-semibold text-white border border-white/30 bg-white/10">
                                     🌍 Empowering Global Aspirations Since 2010
                                 </span>
                             </motion.div>
@@ -100,11 +123,11 @@ const Home = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                                 transition={{ delay: 0.4, duration: 0.8 }}
-                                className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-navy-muted mb-8 leading-tight drop-shadow-lg"
-                                style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.1)' }}
+                                className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-tight drop-shadow-2xl"
+                                style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.5)' }}
                             >
                                 Your Gateway to{' '}
-                                <span className="bg-gradient-to-r from-brand-purple via-brand-purple to-brand-blue bg-clip-text text-transparent">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200 drop-shadow-lg">
                                     World-Class Education
                                 </span>{' '}
                                 Abroad
@@ -115,7 +138,7 @@ const Home = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                                 transition={{ delay: 0.6, duration: 0.8 }}
-                                className="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed max-w-3xl font-medium drop-shadow-md"
+                                className="text-xl md:text-2xl text-blue-50 mb-10 leading-relaxed max-w-3xl font-light drop-shadow-lg"
                             >
                                 Strategic guidance from our global offices. Transform your academic potential into reality
                                 with personalized university selection, admissions strategy, and scholarship advisory.
