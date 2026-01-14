@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import logo from '../assets/pathway_logo.png';
 
 const Footer = () => {
     return (
@@ -7,8 +8,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     {/* Company Info */}
                     <div>
-                        <div className="text-2xl font-bold bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent mb-4">
-                            Pathway International
+                        <div className="mb-6">
+                            <img src={logo} alt="Pathway International" className="h-24 w-auto object-contain bg-white/10 p-2 rounded-lg backdrop-blur-sm" />
                         </div>
                         <p className="text-gray-400 leading-relaxed mb-4">
                             Your trusted partner for international education, empowering students to achieve their academic goals at world-class institutions.
