@@ -70,7 +70,10 @@ const WhyChooseUs = () => {
                             transition={{ delay: index * 0.1, duration: 0.6 }}
                             className="relative"
                         >
-                            <div className="glass-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all h-full">
+                            <div className="glass-card p-8 rounded-2xl shadow-lg transition-all h-full relative overflow-hidden group hover:shadow-[0_0_40px_rgba(109,40,217,0.3)] duration-500">
+                                {/* Gradient Top Border - Appears on Hover */}
+                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                 <div className="text-6xl font-bold text-brand-light mb-4">
                                     {reason.number}
                                 </div>

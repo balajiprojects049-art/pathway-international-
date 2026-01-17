@@ -81,8 +81,11 @@ const Testimonials = () => {
                             animate={inView ? { opacity: 1, scale: 1 } : {}}
                             transition={{ delay: index * 0.1, duration: 0.6 }}
                             whileHover={{ y: -5 }}
-                            className="glass-card p-8 rounded-2xl"
+                            className="glass-card p-8 rounded-2xl relative overflow-hidden group transition-all hover:shadow-[0_0_40px_rgba(109,40,217,0.3)] duration-500"
                         >
+                            {/* Gradient Top Border - Appears on Hover */}
+                            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                             {/* Rating */}
                             <div className="flex gap-1 mb-4">
                                 {[...Array(testimonial.rating)].map((_, i) => (

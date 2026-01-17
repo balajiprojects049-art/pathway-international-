@@ -19,6 +19,7 @@ import CountryIreland from './pages/CountryIreland';
 import CountryUK from './pages/CountryUK';
 import CountryNewZealand from './pages/CountryNewZealand';
 import CountryGermany from './pages/CountryGermany';
+import Exams from './pages/Exams';
 
 import SmoothScroll from './components/SmoothScroll';
 
@@ -45,6 +46,7 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/destinations" element={<Destinations />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/exams" element={<Exams />} />
             <Route path="/universities" element={<Universities />} />
             <Route path="/success" element={<StudentSuccess />} />
             <Route path="/book-consultation" element={<BookConsultation />} />

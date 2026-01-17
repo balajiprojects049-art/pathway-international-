@@ -88,8 +88,11 @@ const ServicesPage = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                                className="glass-card p-8 rounded-2xl text-center hover:shadow-xl transition-all"
+                                className="glass-card p-8 rounded-2xl text-center transition-all relative overflow-hidden group hover:shadow-[0_0_40px_rgba(109,40,217,0.3)] duration-500"
                             >
+                                {/* Gradient Top Border - Appears on Hover */}
+                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                 <div className="text-5xl mb-4">{stat.icon}</div>
                                 <div className="text-4xl md:text-5xl font-bold text-brand-purple mb-2">{stat.number}</div>
                                 <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -135,32 +138,33 @@ const ServicesPage = () => {
                                 step: '03',
                                 title: 'Application Preparation',
                                 description: 'Comprehensive support for essays, SOPs, LORs, and documentation',
-                                duration: '1-2  weeks'
+                                duration: '1-2  Days'
                             },
                             {
                                 step: '04',
                                 title: 'Submission & Follow-up',
                                 description: 'Timely application submission and regular communication with university admissions',
-                                duration: '1-2 weeks'
+                                duration: '1-2 Days'
                             },
                             {
                                 step: '05',
                                 title: 'Attending the Interview',
                                 description: 'Comprehensive mock interviews and personalized coaching to ensure you face university interactions with confidence',
-                                duration: '2-3 weeks'
+                                duration: '2-3 Days'
                             },
                             {
                                 step: '06',
                                 title: 'Visa Guidance',
                                 description: 'Expert assistance with visa documentation, interview preparation, and submission',
-                                duration: '2-3 weeks'
+                                duration: '2-3 Days'
                             },
                             {
                                 step: '07',
                                 title: 'Pre-Departure',
                                 description: 'Orientation covering accommodation, travel, and settling into your new country',
-                                duration: '3-4 weeks'
+                                duration: '3-4 Days'
                             },
+
                         ].map((process, index) => (
                             <motion.div
                                 key={index}
@@ -168,12 +172,12 @@ const ServicesPage = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="premium-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group"
+                                className="flex items-start gap-6"
                             >
-                                <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gradient-to-br from-brand-purple to-brand-blue flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
+                                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-brand-purple to-brand-blue flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
                                     {process.step}
                                 </div>
-                                <div className="flex-1 glass-card p-6 rounded-2xl group-hover:shadow-lg transition-all">
+                                <div className="flex-1 premium-card bg-white p-6 rounded-2xl shadow-lg border border-gray-100 group hover:shadow-xl transition-all">
                                     <div className="flex justify-between items-start mb-2">
                                         <h3 className="text-2xl font-bold text-navy-muted">{process.title}</h3>
                                         <span className="text-sm text-brand-purple font-semibold bg-brand-purple/10 px-3 py-1 rounded-full">
@@ -245,111 +249,14 @@ const ServicesPage = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                                className="glass-card p-8 rounded-2xl hover:shadow-xl transition-all group"
+                                className="glass-card p-8 rounded-2xl transition-all relative overflow-hidden hover:shadow-[0_0_40px_rgba(109,40,217,0.3)] duration-500"
                             >
+                                {/* Gradient Top Border - Appears on Hover */}
+                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{benefit.icon}</div>
                                 <h3 className="text-2xl font-bold text-navy-muted mb-3">{benefit.title}</h3>
                                 <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* English Proficiency & Entrance Exams Section */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 md:px-8 lg:px-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="text-center mb-16"
-                    >
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-navy-muted mb-4">
-                            English Proficiency & <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">Entrance Exams</span>
-                        </h2>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Prepare for globally recognized tests that open pathways to international education and career opportunities.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-                        {[
-                            {
-                                name: 'IELTS',
-                                color: 'border-blue-500',
-                                description: 'The IELTS test measures English proficiency for study, migration, or work. Accepted by 11,000+ institutions worldwide.',
-                                details: [
-                                    'Score range: 0-9 bands',
-                                    'Has types: Academic & General',
-                                    'Duration: 2 hrs 45 mins'
-                                ]
-                            },
-                            {
-                                name: 'TOEFL',
-                                color: 'border-purple-500',
-                                description: 'TOEFL assesses academic English skills for university admission, focusing on reading, listening, speaking, and writing.',
-                                details: [
-                                    'Score range: 0-120',
-                                    'Accepted by 160+ countries',
-                                    'Duration: ~3 hours'
-                                ]
-                            },
-                            {
-                                name: 'GRE',
-                                color: 'border-indigo-500',
-                                description: 'GRE evaluates analytical writing, quantitative, and verbal reasoning — essential for graduate and business schools.',
-                                details: [
-                                    'Score range: 260-340',
-                                    'Sections: Verbal, Quant, Writing',
-                                    'Duration: ~3 hrs 45 mins'
-                                ]
-                            },
-                            {
-                                name: 'PTE',
-                                color: 'border-green-500',
-                                description: 'The PTE Academic test—fast as a scoring for accurate results, widely accepted for study and migration worldwide.',
-                                details: [
-                                    'Score range: 10-90',
-                                    'Fully computer-based test',
-                                    'Duration: 2 hrs'
-                                ]
-                            },
-                            {
-                                name: 'Duolingo',
-                                color: 'border-emerald-500',
-                                colSpan: true,
-                                description: 'A quick, affordable online English test that evaluates reading, writing, listening, and speaking — anytime, anywhere.',
-                                details: [
-                                    'Score range: 10-160',
-                                    'Takes less than 1 hour',
-                                    'Available 24/7 online'
-                                ]
-                            },
-                        ].map((exam, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1, duration: 0.5 }}
-                                className={`bg-white border-l-4 ${exam.color} rounded-xl p-6 shadow-md hover:shadow-lg transition-all ${exam.colSpan ? 'md:col-span-2' : ''}`}
-                            >
-                                <h3 className="text-2xl font-bold text-brand-purple mb-3">
-                                    {exam.name}
-                                </h3>
-                                <p className="text-gray-600 mb-4 leading-relaxed">
-                                    {exam.description}
-                                </p>
-                                <ul className="space-y-2">
-                                    {exam.details.map((detail, idx) => (
-                                        <li key={idx} className="flex items-start text-sm text-gray-700">
-                                            <span className="text-brand-purple mr-2 mt-0.5">•</span>
-                                            {detail}
-                                        </li>
-                                    ))}
-                                </ul>
                             </motion.div>
                         ))}
                     </div>

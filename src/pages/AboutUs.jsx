@@ -114,7 +114,10 @@ const AboutUs = () => {
                             className="space-y-4"
                         >
                             {timeline.map((item, index) => (
-                                <div key={index} className="glass-card p-6 rounded-2xl border border-white/50 shadow-lg hover:shadow-xl transition-all">
+                                <div key={index} className="glass-card p-6 rounded-2xl border border-white/50 shadow-lg transition-all relative overflow-hidden group hover:shadow-[0_0_40px_rgba(109,40,217,0.3)] duration-500">
+                                    {/* Gradient Top Border - Appears on Hover */}
+                                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                     <div className="flex items-start gap-4">
                                         <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-brand-purple to-brand-blue flex items-center justify-center text-white font-display font-bold text-xl shadow-lg">
                                             {item.year.slice(-2)}
@@ -174,8 +177,11 @@ const AboutUs = () => {
                                 animate={valuesInView ? { opacity: 1, y: 0 } : {}}
                                 transition={{ delay: index * 0.2, duration: 0.6 }}
                                 whileHover={{ y: -10, scale: 1.03 }}
-                                className="glass-card p-10 rounded-3xl text-center shadow-lg hover:shadow-2xl transition-all border border-white/60"
+                                className="glass-card p-10 rounded-3xl text-center shadow-lg transition-all border border-white/60 relative overflow-hidden group hover:shadow-[0_0_40px_rgba(109,40,217,0.3)] duration-500"
                             >
+                                {/* Gradient Top Border - Appears on Hover */}
+                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                 <div className="text-6xl mb-6 drop-shadow-md">{value.icon}</div>
                                 <h3 className="text-2xl font-display font-bold text-navy-muted mb-4">
                                     {value.title}
@@ -207,11 +213,11 @@ const AboutUs = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="premium-card bg-white p-8 rounded-3xl shadow-lg border border-gray-100 group text-center"
+                                className="premium-card bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 group text-center hover:bg-white/10"
                             >
                                 <div className="text-5xl mb-4">{office.country}</div>
-                                <h3 className="text-2xl font-display font-bold mb-2">{office.city}</h3>
-                                <p className="text-white/80">{office.address}</p>
+                                <h3 className="text-2xl font-display font-bold mb-2 text-white">{office.city}</h3>
+                                <p className="text-gray-300 group-hover:text-white transition-colors">{office.address}</p>
                             </motion.div>
                         ))}
                     </div>

@@ -84,8 +84,11 @@ const Universities = () => {
                                 animate={gridInView ? { opacity: 1, scale: 1 } : {}}
                                 transition={{ delay: index * 0.05, duration: 0.5 }}
                                 whileHover={{ y: -8, scale: 1.03 }}
-                                className="glass-card p-8 rounded-2xl hover:shadow-2xl transition-all group cursor-pointer border border-white/60 bg-white/80"
+                                className="glass-card p-8 rounded-2xl transition-all cursor-pointer border border-white/60 bg-white/80 relative overflow-hidden group hover:shadow-[0_0_40px_rgba(109,40,217,0.3)] duration-500"
                             >
+                                {/* Gradient Top Border - Appears on Hover */}
+                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform filter drop-shadow-sm">
                                     {uni.logo}
                                 </div>

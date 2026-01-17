@@ -26,6 +26,14 @@ const Home = () => {
     const [openFAQ, setOpenFAQ] = useState(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    // Animated counters state
+    const [counters, setCounters] = useState({
+        students: 0,
+        partners: 0,
+        countries: 0,
+        visaRate: 0
+    });
+
     const heroSlides = [
         heroSlideUSA,
         heroSlideUK,
@@ -40,6 +48,45 @@ const Home = () => {
         }, 5000);
         return () => clearInterval(timer);
     }, [heroSlides.length]);
+
+    // Animated counter effect
+    useEffect(() => {
+        if (statsInView) {
+            const duration = 2000; // 2 seconds
+            const frameDuration = 1000 / 60; // 60fps
+            const totalFrames = Math.round(duration / frameDuration);
+
+            const targets = {
+                students: 1000,
+                partners: 50,
+                countries: 15,
+                visaRate: 98
+            };
+
+            let frame = 0;
+
+            const counter = setInterval(() => {
+                frame++;
+                const progress = frame / totalFrames;
+
+                // Easing function for smooth animation (easeOutQuart)
+                const easeOut = 1 - Math.pow(1 - progress, 4);
+
+                setCounters({
+                    students: Math.round(easeOut * targets.students),
+                    partners: Math.round(easeOut * targets.partners),
+                    countries: Math.round(easeOut * targets.countries),
+                    visaRate: Math.round(easeOut * targets.visaRate)
+                });
+
+                if (frame === totalFrames) {
+                    clearInterval(counter);
+                }
+            }, frameDuration);
+
+            return () => clearInterval(counter);
+        }
+    }, [statsInView]);
 
 
     const stats = [
@@ -185,10 +232,10 @@ const Home = () => {
                 <div className="container mx-auto px-4 md:px-8 lg:px-16">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
-                            { number: '10,000+', label: 'Students Placed Globally' },
-                            { number: '50+', label: 'Partner Institutions' },
-                            { number: '15+', label: 'Countries Worldwide' },
-                            { number: '98%', label: 'Visa Approval Rate' },
+                            { key: 'students', value: counters.students, suffix: '+', label: 'Students Placed Globally', format: true },
+                            { key: 'partners', value: counters.partners, suffix: '+', label: 'Partner Institutions', format: false },
+                            { key: 'countries', value: counters.countries, suffix: '+', label: 'Countries Worldwide', format: false },
+                            { key: 'visaRate', value: counters.visaRate, suffix: '%', label: 'Visa Approval Rate', format: false },
                         ].map((stat, index) => (
                             <motion.div
                                 key={index}
@@ -198,7 +245,7 @@ const Home = () => {
                                 className="text-center"
                             >
                                 <div className="text-4xl md:text-5xl lg:text-6xl font-display font-bold bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent mb-3">
-                                    {stat.number}
+                                    {stat.format ? stat.value.toLocaleString() : stat.value}{stat.suffix}
                                 </div>
                                 <div className="text-sm md:text-base text-gray-600 font-medium">
                                     {stat.label}
@@ -255,8 +302,11 @@ const Home = () => {
                                 animate={featuresInView ? { opacity: 1, y: 0 } : {}}
                                 transition={{ delay: index * 0.1, duration: 0.6 }}
                                 whileHover={{ y: -10, scale: 1.02 }}
-                                className="glass-card p-8 rounded-3xl"
+                                className="glass-card p-8 rounded-3xl relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_40px_rgba(109,40,217,0.3)]"
                             >
+                                {/* Gradient Top Border - Appears on Hover */}
+                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                 <div className="text-6xl mb-5">{item.icon}</div>
                                 <h3 className="text-xl font-display font-bold text-navy-muted mb-3">
                                     {item.title}
@@ -617,8 +667,11 @@ const Home = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                                className="glass-card p-8 rounded-3xl"
+                                className="glass-card p-8 rounded-3xl relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_40px_rgba(109,40,217,0.3)]"
                             >
+                                {/* Gradient Top Border - Appears on Hover */}
+                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                 <div className="flex gap-1 mb-4">
                                     {[...Array(testimonial.rating)].map((_, i) => (
                                         <span key={i} className="text-2xl">⭐</span>
@@ -672,8 +725,11 @@ const Home = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.05, duration: 0.4 }}
-                                    className="glass-card p-6 rounded-2xl text-center hover:shadow-lg transition-all flex-shrink-0 w-64 snap-start"
+                                    className="glass-card p-6 rounded-2xl text-center transition-all flex-shrink-0 w-64 snap-start relative overflow-hidden group hover:shadow-[0_0_40px_rgba(109,40,217,0.3)] duration-500"
                                 >
+                                    {/* Gradient Top Border - Appears on Hover */}
+                                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                                     <div className="text-3xl mb-2">🎓</div>
                                     <p className="text-sm font-semibold text-navy-muted">{uni}</p>
                                 </motion.div>
