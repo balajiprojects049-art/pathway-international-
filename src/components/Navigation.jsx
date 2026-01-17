@@ -27,7 +27,6 @@ const Navigation = () => {
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Services', path: '/services' },
-        { name: 'Exams', path: '/exams' },
         { name: 'Contact', path: '/contact' },
     ];
 
@@ -56,14 +55,14 @@ const Navigation = () => {
             <div className="container mx-auto px-4 md:px-8 lg:px-12">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link to="/" className="flex flex-col items-center ml-8 group">
+                    <Link to="/" className="flex flex-col items-center group">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             className="cursor-pointer"
                         >
                             <img src={logo} alt="Pathway International" className="h-16 w-auto object-contain" />
                         </motion.div>
-                        <span className="text-xs md:text-sm font-bold bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:opacity-100">
+                        <span className="text-xs md:text-sm font-bold bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent mt-1">
                             Pathway International
                         </span>
                     </Link>

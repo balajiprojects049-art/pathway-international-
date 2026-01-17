@@ -160,8 +160,9 @@ const Home = () => {
                                 transition={{ delay: 0.2, duration: 0.6 }}
                                 className="inline-block mb-8"
                             >
-                                <span className="glass-card px-6 py-2.5 rounded-full text-sm font-semibold text-white border border-white/30 bg-white/10">
-                                    🌍 Empowering Global Aspirations Since 2024
+                                <span className="glass-card inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-2.5 rounded-full text-xs md:text-sm font-semibold text-white border border-white/30 bg-white/10 text-center max-w-[90vw] whitespace-normal md:whitespace-nowrap">
+                                    <span className="shrink-0">🌍</span>
+                                    <span>Empowering Global Aspirations Since 2024</span>
                                 </span>
                             </motion.div>
 

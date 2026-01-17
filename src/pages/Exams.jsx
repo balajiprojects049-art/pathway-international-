@@ -226,10 +226,10 @@ const Exams = () => {
 
                                 {/* Header */}
                                 <div className={`p-8 bg-gradient-to-r ${exam.name === 'IELTS' ? 'from-blue-50 to-blue-100' :
-                                        exam.name === 'TOEFL' ? 'from-purple-50 to-purple-100' :
-                                            exam.name === 'GRE' ? 'from-indigo-50 to-indigo-100' :
-                                                exam.name === 'PTE' ? 'from-green-50 to-green-100' :
-                                                    'from-emerald-50 to-emerald-100'
+                                    exam.name === 'TOEFL' ? 'from-purple-50 to-purple-100' :
+                                        exam.name === 'GRE' ? 'from-indigo-50 to-indigo-100' :
+                                            exam.name === 'PTE' ? 'from-green-50 to-green-100' :
+                                                'from-emerald-50 to-emerald-100'
                                     }`}>
                                     <div className="mb-3">
                                         <h3 className="text-3xl font-bold text-brand-purple">{exam.name}</h3>

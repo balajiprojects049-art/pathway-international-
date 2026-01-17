@@ -90,7 +90,8 @@ h3 {
 
   .premium-card:hover {
     @apply -translate-y-2 shadow-2xl;
-    box-shadow: 0 25px 50px -12px rgba(109, 40, 217, 0.15); /* Purple tint shadow */
+    box-shadow: 0 25px 50px -12px rgba(109, 40, 217, 0.15);
+    /* Purple tint shadow */
   }
 
   /* Upside Line Animation */
