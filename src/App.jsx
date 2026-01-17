@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import { useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -61,6 +62,7 @@ function App() {
             <Route path="/country/germany" element={<CountryGermany />} />
           </Routes>
           <Footer />
+          <FloatingWhatsApp />
         </div>
       </SmoothScroll>
     </Router>
