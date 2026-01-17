@@ -10,11 +10,8 @@ const AboutUs = () => {
     const [valuesRef, valuesInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     const timeline = [
-        { year: '2010', event: 'Founded with a vision to transform international education' },
-        { year: '2013', event: 'Opened first international office in London' },
-        { year: '2016', event: 'Expanded to USA with New York office' },
-        { year: '2019', event: 'Dubai office established, serving Middle East students' },
-        { year: '2023', event: 'Celebrated 10,000+ successful student placements' },
+        { year: '2025', event: 'Global Launch: Established with a vision to revolutionize international education, starting with our main branch in Nellore.' },
+        { year: '2025', event: 'Expanded virtual presence to London, Toronto, and Melbourne to support students worldwide.' },
     ];
 
     const values = [
@@ -93,16 +90,16 @@ const AboutUs = () => {
                             </h2>
                             <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                                 <p>
-                                    Founded in 2010, Pathway International was born from a simple vision: to make world-class
-                                    education accessible to ambitious students everywhere.
+                                    Established in January 2025, Pathway International was born from a fresh vision: to make
+                                    world-class education accessible to ambitious students through modern, personalized consultancy.
                                 </p>
                                 <p>
-                                    From our first office in London to establishing presence in New York and Dubai,
-                                    we've built a network that connects students with opportunities across continents.
+                                    Starting with our main headquarters in Nellore, India, we have rapidly adopted a digital-first approach,
+                                    establishing virtual offices in key global education hubs including London, Toronto, and Melbourne.
                                 </p>
                                 <p>
-                                    Today, with over 10,000 successful placements and partnerships with 50+ prestigious
-                                    universities, we continue to set the standard for international education consultancy.
+                                    We are a new age consultancy built on transparency, integrity, and a deep commitment to student success.
+                                    We partner with prestigious universities to give you the best start to your global career.
                                 </p>
                             </div>
                         </motion.div>
@@ -200,13 +197,14 @@ const AboutUs = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-dark to-black opacity-90 z-0" />
                 <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
                     <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-16">
-                        Our Global Offices
+                        Our Global Presence
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {[
-                            { city: 'New York', address: '350 Fifth Avenue, NY 10118', country: '🇺🇸' },
-                            { city: 'London', address: '45 Oxford Street, W1D 2DU', country: '🇬🇧' },
-                            { city: 'Dubai', address: 'Business Bay, UAE', country: '🇦🇪' },
+                            { city: 'Nellore', type: 'Main Branch', country: '🇮🇳' },
+                            { city: 'London', type: 'Virtual Office', country: '🇬🇧' },
+                            { city: 'Toronto', type: 'Virtual Office', country: '🇨🇦' },
+                            { city: 'Melbourne', type: 'Virtual Office', country: '🇦🇺' },
                         ].map((office, index) => (
                             <motion.div
                                 key={index}
@@ -217,7 +215,7 @@ const AboutUs = () => {
                             >
                                 <div className="text-5xl mb-4">{office.country}</div>
                                 <h3 className="text-2xl font-display font-bold mb-2 text-white">{office.city}</h3>
-                                <p className="text-gray-300 group-hover:text-white transition-colors">{office.address}</p>
+                                <p className="text-gray-300 group-hover:text-white transition-colors text-sm uppercase tracking-widest">{office.type}</p>
                             </motion.div>
                         ))}
                     </div>

@@ -57,10 +57,10 @@ const Home = () => {
             const totalFrames = Math.round(duration / frameDuration);
 
             const targets = {
-                students: 1000,
+                students: 100,
                 partners: 50,
                 countries: 15,
-                visaRate: 98
+                visaRate: 100
             };
 
             let frame = 0;
@@ -90,10 +90,10 @@ const Home = () => {
 
 
     const stats = [
-        { number: '10,000+', label: 'Students Placed Globally' },
+        { number: '100%', label: 'Student Focus' },
         { number: '50+', label: 'Partner Universities' },
         { number: '15+', label: 'Countries Worldwide' },
-        { number: '98%', label: 'Visa Success Rate' },
+        { number: '100%', label: 'Visa Success Goal' },
     ];
 
     const highlights = [
@@ -110,7 +110,7 @@ const Home = () => {
         {
             icon: '💼',
             title: 'Expert Counseling',
-            description: 'Certified counselors with 10+ years experience',
+            description: 'Certified counselors with global expertise',
         },
         {
             icon: '✈️',
@@ -161,8 +161,7 @@ const Home = () => {
                                 className="inline-block mb-8"
                             >
                                 <span className="glass-card inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-2.5 rounded-full text-xs md:text-sm font-semibold text-white border border-white/30 bg-white/10 text-center max-w-[90vw] whitespace-normal md:whitespace-nowrap">
-                                    <span className="shrink-0">🌍</span>
-                                    <span>Empowering Global Aspirations Since 2024</span>
+                                    <span>Empowering Global Aspirations Since 2025</span>
                                 </span>
                             </motion.div>
 
@@ -233,10 +232,10 @@ const Home = () => {
                 <div className="container mx-auto px-4 md:px-8 lg:px-16">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
-                            { key: 'students', value: counters.students, suffix: '+', label: 'Students Placed Globally', format: true },
+                            { key: 'students', value: counters.students, suffix: '%', label: 'Student Focus', format: false },
                             { key: 'partners', value: counters.partners, suffix: '+', label: 'Partner Institutions', format: false },
                             { key: 'countries', value: counters.countries, suffix: '+', label: 'Countries Worldwide', format: false },
-                            { key: 'visaRate', value: counters.visaRate, suffix: '%', label: 'Visa Approval Rate', format: false },
+                            { key: 'visaRate', value: counters.visaRate, suffix: '%', label: 'Visa Success Goal', format: false },
                         ].map((stat, index) => (
                             <motion.div
                                 key={index}
@@ -289,7 +288,7 @@ const Home = () => {
                             {
                                 icon: '💼',
                                 title: 'Strategic Counseling',
-                                description: 'Certified counselors with 10+ years of industry experience',
+                                description: 'Certified counselors with deep industry expertise',
                             },
                             {
                                 icon: '✈️',
@@ -651,8 +650,8 @@ const Home = () => {
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-navy-muted mb-4">
                             What Our <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">Students Say</span>
                         </h2>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Real stories from students who achieved their study abroad dreams
+                        <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                            Join ambitious students who are finding their path with our expert guidance.
                         </p>
                     </motion.div>
 
@@ -792,7 +791,7 @@ const Home = () => {
                             { q: 'Do you help with scholarships?', a: 'Yes! We provide comprehensive scholarship guidance and help you identify and apply for merit-based, need-based, and university-specific scholarships.' },
                             { q: 'What is the cost of your services?', a: 'We offer complimentary initial consultation. Our service packages are customized based on your needs, and we work on transparent pricing with no hidden costs.' },
                             { q: 'Can I apply to multiple universities?', a: 'Absolutely! We recommend applying to 5-8 universities to maximize your chances of admission and compare offers.' },
-                            { q: 'What is your visa success rate?', a: 'We maintain a 98% visa success rate through meticulous documentation, expert guidance, and thorough interview preparation.' },
+                            { q: 'What is your visa success rate?', a: 'We strive for a 100% visa success rate through meticulous documentation, expert guidance, and thorough interview preparation.' },
                         ].map((faq, index) => (
                             <motion.div
                                 key={index}

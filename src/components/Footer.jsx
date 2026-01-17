@@ -32,7 +32,7 @@ const Footer = () => {
                                             <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.484 2h.584zm-8.063 2.6c-.95.043-1.468.214-1.812.347-.457.177-.784.385-1.127.728-.344.343-.551.67-.728 1.127-.133.344-.304.862-.347 1.812-.043 1.002-.054 1.311-.054 3.737v.38c0 2.426.011 2.735.054 3.737.043.95.214 1.468.347 1.812.177.457.385.784.728 1.127.343.344.67.551 1.127.728.344.133.862.304 1.812.347 1.002.043 1.311.054 3.737.054h.38c2.426 0 2.735-.011 3.737-.054.95-.043 1.468-.214 1.812-.347.457-.177.784-.385 1.127-.728.343-.344.551-.67.728-1.127.133-.344.304-.862.347-1.812.043-1.002.054-1.311.054-3.737v-.38c0-2.426-.011-2.735-.054-3.737-.043-.95-.214-1.468-.347-1.812-.177-.457-.385-.784-.728-1.127-.343-.344-.67-.551-1.127-.728-.344-.133-.862-.304-1.812-.347-1.002-.043-1.311-.054-3.737-.054h-.38c-2.426 0-2.735.011-3.737.054zm5.732 3.123a5.275 5.275 0 00-1.889 7.002 5.275 5.275 0 007.002 1.889 5.275 5.275 0 00-5.113-8.891zm0 1.957a3.318 3.318 0 110 6.636 3.318 3.318 0 010-6.636zm3.935-4.481a1.305 1.305 0 110 2.61 1.305 1.305 0 010-2.61z" clipRule="evenodd" />
                                         </svg>
                                     ),
-                                    href: '#'
+                                    href: 'https://www.instagram.com/pathway__international/?__pwa=1'
                                 },
                                 /*
                                 {
@@ -99,22 +99,32 @@ const Footer = () => {
                     {/* Contact */}
                     <div>
                         <h3 className="text-lg font-bold mb-4">Contact</h3>
-                        <ul className="space-y-3 text-gray-400">
+                        <ul className="space-y-3 text-gray-400 text-sm">
                             <li className="flex items-start gap-2">
                                 <span>📧</span>
-                                <span>info@pathwayglobal.com</span>
+                                <span>Pathwayinternationalnlr@gmail.com</span>
                             </li>
-                            <li className="flex items-start gap-2">
-                                <span>📞</span>
-                                <span>+44 7392 093146</span>
+                            <li className="flex flex-col gap-1">
+                                <div className="flex items-center gap-2">
+                                    <span>🇮🇳</span> <span>+91 6302 040 874 (India - Main Branch)</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span>🇬🇧</span> <span>+44 7767 934282 (UK - Virtual Office)</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span>🇨🇦</span> <span>+1 (514) 212-2350 (Canada - Virtual Office)</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span>🇦🇺</span> <span>+61 416 491 057 (Australia - Virtual Office)</span>
+                                </div>
                             </li>
-                            <li className="flex items-start gap-2">
+                            <li className="flex items-start gap-2 pt-2">
                                 <span>🏢</span>
-                                <span>New York | London | Dubai</span>
+                                <span>Nellore (Main) | London | Toronto | Melbourne</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span>⏰</span>
-                                <span>Mon - Sat: 9:00 AM - 6:00 PM EST</span>
+                                <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
                             </li>
                         </ul>
                     </div>

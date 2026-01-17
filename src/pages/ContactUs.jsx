@@ -54,6 +54,36 @@ const ContactUs = () => {
             </section>
 
             <Contact />
+
+            {/* Map Section */}
+            <section className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4 md:px-8 lg:px-16">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-display font-bold text-navy-muted mb-4">Visit Our Office</h2>
+                            <p className="text-gray-600 max-w-2xl mx-auto">
+                                We are conveniently located in Nellore. Drop by for a face-to-face consultation.
+                            </p>
+                            <p className="text-sm text-gray-500 mt-2">
+                                Maanvi Mansion, King's Court Avenue, beside Nellore Hub, Srihari Nagar, Magunta Layout, Nellore, Andhra Pradesh 524003
+                            </p>
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 h-[450px]">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=PATHWAY%20INTERNATIONAL%20-%20Best%20Study%20Abroad%2C%20IELTS%2C%20PTE%20%26%20TOEFL%20Guidance%20%26%20VISA%20SUPPORT%2C%20Maanvi%20Mansion%2C%20King's%20Court%20Avenue%2C%20beside%20Nellore%20Hub%2C%20Srihari%20Nagar%2C%20Magunta%20Layout%2C%20Nellore%2C%20Andhra%20Pradesh%20524003&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                frameBorder="0"
+                                scrolling="no"
+                                marginHeight="0"
+                                marginWidth="0"
+                                title="Pathway International Location"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const FloatingWhatsApp = () => {
-    const phoneNumber = '447392093146'; // International format without '+'
+    const phoneNumber = '919502408286'; // International format without '+'
     const message = 'Hello! I am interested in studying abroad. Can you help me?';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

@@ -62,67 +62,122 @@ const Contact = () => {
                             <img
                                 src={contactImage}
                                 alt="Customer Support"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                             <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                                 <h3 className="text-2xl font-bold mb-2">We're Here to Help</h3>
-                                <p className="text-white/80 mb-6">Our expert counselors are ready to guide you.</p>
-
-                                <div className="space-y-3">
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-xl">📧</span>
-                                        <span className="font-medium">info@pathwayglobal.com</span>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-xl">📞</span>
-                                        <span className="font-medium">+44 7392 093146</span>
-                                    </div>
-                                </div>
+                                <p className="text-white/80">Our expert counselors are ready to guide you through every step of your journey.</p>
                             </div>
                         </div>
 
-                        {/* Social Links */}
-                        <div className="glass-card p-8 rounded-2xl shadow-lg text-center">
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">
-                                Follow Us
-                            </h3>
-                            <div className="flex gap-4 justify-center">
-                                {[
-                                    { name: 'Facebook', icon: <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /> },
-                                    { name: 'Instagram', icon: <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" /> }, // Simplified, usually requires rect/circle combo. Let's use a standard path for simplicity or complex SVG. Usually simple path works for 'camera' look or just use multiple shapes. Let's stick to simple paths.
-                                    { name: 'LinkedIn', icon: <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" /> },
-                                    { name: 'Twitter', icon: <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" /> }
-                                ].map((social) => (
-                                    <motion.a
-                                        key={social.name}
-                                        href="#"
-                                        whileHover={{ scale: 1.1, y: -5 }}
-                                        className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-purple to-brand-blue text-white flex items-center justify-center font-semibold shadow-lg hover:shadow-xl transition-all"
-                                        aria-label={social.name}
-                                    >
-                                        <svg
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                            stroke="currentColor"
-                                            strokeWidth="0"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            className="w-6 h-6"
-                                        >
-                                            {social.name === 'Instagram' ? (
-                                                <>
-                                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" strokeWidth="2" fill="none"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" strokeWidth="2" fill="none"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" strokeWidth="2"></line>
-                                                </>
-                                            ) : (
-                                                social.icon
-                                            )}
-                                        </svg>
-                                    </motion.a>
-                                ))}
+                        {/* Contact Details & Social Section */}
+                        <div className="glass-card p-6 md:p-8 rounded-2xl shadow-lg">
+                            <div className="space-y-6">
+                                {/* Top Row: Email and Hours */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {/* Email */}
+                                    <div className="flex items-center gap-3 p-3 bg-blue-50/50 rounded-xl border border-blue-100 hover:bg-blue-50 transition-colors">
+                                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-lg shrink-0">
+                                            📧
+                                        </div>
+                                        <div className="min-w-0">
+                                            <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Email Us</p>
+                                            <p className="font-medium text-gray-900 break-all text-xs sm:text-sm">Pathwayinternationalnlr@gmail.com</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Hours */}
+                                    <div className="flex items-center gap-3 p-3 bg-purple-50/50 rounded-xl border border-purple-100 hover:bg-purple-50 transition-colors">
+                                        <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-lg shrink-0">
+                                            ⏰
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Working Hours</p>
+                                            <p className="font-medium text-gray-900 text-xs sm:text-sm">Mon-Sat: 10AM-7PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Global Numbers Grid */}
+                                <div>
+                                    <p className="text-sm text-gray-500 font-semibold uppercase tracking-wider mb-3">Global Support Lines</p>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100 hover:bg-white hover:shadow-md transition-all">
+                                            <span className="text-2xl">🇮🇳</span>
+                                            <div>
+                                                <p className="text-xs text-brand-purple font-bold uppercase">India (Main Branch)</p>
+                                                <p className="font-medium text-gray-900 text-sm">+91 6302 040 874</p>
+                                                <p className="text-[10px] text-gray-500">Nellore</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100 hover:bg-white hover:shadow-md transition-all">
+                                            <span className="text-2xl">🇬🇧</span>
+                                            <div>
+                                                <p className="text-xs text-brand-purple font-bold uppercase">UK (Virtual Office)</p>
+                                                <p className="font-medium text-gray-900 text-sm">+44 7767 934282</p>
+                                                <p className="text-[10px] text-gray-500">London</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100 hover:bg-white hover:shadow-md transition-all">
+                                            <span className="text-2xl">🇨🇦</span>
+                                            <div>
+                                                <p className="text-xs text-brand-purple font-bold uppercase">Canada (Virtual Office)</p>
+                                                <p className="font-medium text-gray-900 text-sm">+1 (514) 212-2350</p>
+                                                <p className="text-[10px] text-gray-500">Toronto</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100 hover:bg-white hover:shadow-md transition-all">
+                                            <span className="text-2xl">🇦🇺</span>
+                                            <div>
+                                                <p className="text-xs text-brand-purple font-bold uppercase">Australia (Virtual Office)</p>
+                                                <p className="font-medium text-gray-900 text-sm">+61 416 491 057</p>
+                                                <p className="text-[10px] text-gray-500">Melbourne</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="border-t border-gray-100 pt-6">
+                                    <h3 className="text-center text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">
+                                        Follow Us
+                                    </h3>
+                                    <div className="flex gap-4 justify-center">
+                                        {[
+                                            { name: 'Facebook', icon: <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />, href: 'https://www.facebook.com/people/Pathway-international/61586515402866/' },
+                                            { name: 'Instagram', icon: <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />, href: 'https://www.instagram.com/pathway__international/?__pwa=1' }
+                                        ].map((social) => (
+                                            <motion.a
+                                                key={social.name}
+                                                href={social.href}
+                                                whileHover={{ scale: 1.1, y: -5 }}
+                                                className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-purple to-brand-blue text-white flex items-center justify-center font-semibold shadow-md hover:shadow-lg transition-all"
+                                                aria-label={social.name}
+                                            >
+                                                <svg
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    stroke="currentColor"
+                                                    strokeWidth="0"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    className="w-5 h-5"
+                                                >
+                                                    {social.name === 'Instagram' ? (
+                                                        <>
+                                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" strokeWidth="2" fill="none"></rect>
+                                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" strokeWidth="2" fill="none"></path>
+                                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" strokeWidth="2"></line>
+                                                        </>
+                                                    ) : (
+                                                        social.icon
+                                                    )}
+                                                </svg>
+                                            </motion.a>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </motion.div>

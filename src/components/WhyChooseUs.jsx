@@ -16,17 +16,17 @@ const WhyChooseUs = () => {
         {
             number: '02',
             title: 'Expert Counselors',
-            description: 'Our team consists of certified counselors with 10+ years of experience in overseas education.',
+            description: 'Our team consists of certified counselors with deep expertise in global education systems.',
         },
         {
             number: '03',
-            title: 'Proven Track Record',
-            description: '98% visa success rate and 10,000+ students successfully placed in top universities worldwide.',
+            title: 'Dedicated Support',
+            description: 'Commitment to high success rates in university admissions and visa approvals for every student.',
         },
         {
             number: '04',
             title: 'University Partnerships',
-            description: 'Official partnerships with 50+ top-ranked universities providing exclusive admission benefits.',
+            description: 'Growing network of partnerships with top-ranked universities providing exclusive admission benefits.',
         },
         {
             number: '05',
