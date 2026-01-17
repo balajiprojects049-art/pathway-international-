@@ -9,7 +9,7 @@ const Footer = () => {
                     {/* Company Info */}
                     <div>
                         <div className="mb-6">
-                            <img src={logo} alt="Pathway International" className="h-24 w-auto object-contain bg-white p-2 rounded-lg" />
+                            <img src={logo} alt="Pathway International" className="h-32 w-auto object-contain bg-white p-2 rounded-lg" />
                         </div>
                         <p className="text-gray-400 leading-relaxed mb-4">
                             Your trusted partner for international education, empowering students to achieve their academic goals at world-class institutions.
