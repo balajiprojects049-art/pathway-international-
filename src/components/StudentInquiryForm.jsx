@@ -15,12 +15,15 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
         fieldOfStudy: '',
         graduationYear: '',
         gpa: '',
+        secondaryEducation: '',
 
         // Test Scores
         englishTest: '',
         englishScore: '',
         greGmat: '',
+        greGmat: '',
         greGmatScore: '',
+        noTests: false,
 
         // Study Preferences
         interestedCourse: '',
@@ -71,9 +74,10 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
     }, [isOpen]);
 
     const handleChange = (e) => {
+        const { name, value, type, checked } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: type === 'checkbox' ? checked : value
         });
     };
 
@@ -93,7 +97,7 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                 setSubmitStatus(null);
                 setFormData({
                     fullName: '', email: '', phone: '', country: '', city: '',
-                    highestQualification: '', fieldOfStudy: '', graduationYear: '', gpa: '',
+                    highestQualification: '', fieldOfStudy: '', graduationYear: '', gpa: '', secondaryEducation: '',
                     englishTest: '', englishScore: '', greGmat: '', greGmatScore: '',
                     interestedCourse: '', degreeLevel: '', preferredIntake: '', budgetRange: '',
                     workExperience: '', studyDestination: country || '', additionalInfo: ''
@@ -300,6 +304,14 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             placeholder="GPA / Percentage (e.g., 3.5/4.0 or 85%)"
                                             className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
                                         />
+                                        <input
+                                            type="text"
+                                            name="secondaryEducation"
+                                            value={formData.secondaryEducation}
+                                            onChange={handleChange}
+                                            placeholder="Secondary Education (%)"
+                                            className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
+                                        />
                                     </div>
                                 </div>
 
@@ -328,15 +340,17 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             type="text"
                                             name="englishScore"
                                             value={formData.englishScore}
+                                            disabled={formData.noTests}
                                             onChange={handleChange}
                                             placeholder="Score (e.g., 7.5 for IELTS, 100 for TOEFL)"
-                                            className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
+                                            className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all disabled:opacity-50 disabled:bg-gray-100"
                                         />
                                         <select
                                             name="greGmat"
                                             value={formData.greGmat}
+                                            disabled={formData.noTests}
                                             onChange={handleChange}
-                                            className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
+                                            className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all disabled:opacity-50 disabled:bg-gray-100"
                                         >
                                             <option value="">Graduate Entrance Test</option>
                                             <option value="GRE">GRE (Graduate Record Exam)</option>
@@ -351,10 +365,25 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
                                             type="text"
                                             name="greGmatScore"
                                             value={formData.greGmatScore}
+                                            disabled={formData.noTests}
                                             onChange={handleChange}
                                             placeholder="Score (e.g., 320 for GRE, 700 for GMAT)"
-                                            className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
+                                            className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all disabled:opacity-50 disabled:bg-gray-100"
                                         />
+                                    </div>
+                                    <div className="mt-3">
+                                        <label className="flex items-center gap-2 cursor-pointer group">
+                                            <input
+                                                type="checkbox"
+                                                name="noTests"
+                                                checked={formData.noTests}
+                                                onChange={handleChange}
+                                                className="w-5 h-5 text-brand-purple border-gray-300 rounded focus:ring-brand-purple transition-colors cursor-pointer"
+                                            />
+                                            <span className="text-gray-600 group-hover:text-brand-purple transition-colors">
+                                                None of the above / I have not taken any tests yet
+                                            </span>
+                                        </label>
                                     </div>
                                 </div>
 
