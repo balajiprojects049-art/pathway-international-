@@ -9,18 +9,68 @@ const Universities = () => {
     const [gridRef, gridInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     const universities = [
-        { name: 'Harvard University', country: 'USA', ranking: '#1', logo: '🎓' },
-        { name: 'Stanford University', country: 'USA', ranking: '#2', logo: '🌲' },
-        { name: 'University of Oxford', country: 'UK', ranking: '#3', logo: '📚' },
-        { name: 'University of Cambridge', country: 'UK', ranking: '#4', logo: '🏛️' },
-        { name: 'MIT', country: 'USA', ranking: '#5', logo: '🔬' },
-        { name: 'University of Toronto', country: 'Canada', ranking: '#25', logo: '🍁' },
-        { name: 'University of Melbourne', country: 'Australia', ranking: '#33', logo: '🦘' },
-        { name: 'ETH Zurich', country: 'Switzerland', ranking: '#7', logo: '🇨🇭' },
-        { name: 'Imperial College London', country: 'UK', ranking: '#6', logo: '👑' },
-        { name: 'Yale University', country: 'USA', ranking: '#9', logo: '🏫' },
-        { name: 'LSE', country: 'UK', ranking: '#49', logo: '💼' },
-        { name: 'University of Sydney', country: 'Australia', ranking: '#41', logo: '🌊' },
+        // USA - 14 universities
+        { name: 'Harvard University', country: 'USA', ranking: '#4', logo: '🎓' },
+        { name: 'Stanford University', country: 'USA', ranking: '#5', logo: '🎓' },
+        { name: 'MIT', country: 'USA', ranking: '#1', logo: '🎓' },
+        { name: 'Yale University', country: 'USA', ranking: '#16', logo: '🎓' },
+        { name: 'Princeton University', country: 'USA', ranking: '#17', logo: '🎓' },
+        { name: 'Columbia University', country: 'USA', ranking: '#23', logo: '🎓' },
+        { name: 'UC Berkeley', country: 'USA', ranking: '#27', logo: '🎓' },
+        { name: 'UCLA', country: 'USA', ranking: '#29', logo: '🎓' },
+        { name: 'University of Chicago', country: 'USA', ranking: '#11', logo: '🎓' },
+        { name: 'Cornell University', country: 'USA', ranking: '#16', logo: '🎓' },
+        { name: 'University of Pennsylvania', country: 'USA', ranking: '#12', logo: '🎓' },
+        { name: 'Duke University', country: 'USA', ranking: '#57', logo: '🎓' },
+        { name: 'Northwestern University', country: 'USA', ranking: '#47', logo: '🎓' },
+        { name: 'Johns Hopkins University', country: 'USA', ranking: '#28', logo: '🎓' },
+
+        // UK - 10 universities
+        { name: 'Oxford University', country: 'UK', ranking: '#2', logo: '🎓' },
+        { name: 'Cambridge University', country: 'UK', ranking: '#3', logo: '🎓' },
+        { name: 'Imperial College London', country: 'UK', ranking: '#6', logo: '🎓' },
+        { name: 'UCL', country: 'UK', ranking: '#9', logo: '🎓' },
+        { name: 'LSE', country: 'UK', ranking: '#50', logo: '🎓' },
+        { name: 'University of Edinburgh', country: 'UK', ranking: '#27', logo: '🎓' },
+        { name: 'King\'s College London', country: 'UK', ranking: '#40', logo: '🎓' },
+        { name: 'University of Manchester', country: 'UK', ranking: '#34', logo: '🎓' },
+        { name: 'University of Warwick', country: 'UK', ranking: '#69', logo: '🎓' },
+        { name: 'University of Bristol', country: 'UK', ranking: '#55', logo: '🎓' },
+
+        // Canada - 6 universities
+        { name: 'University of Toronto', country: 'Canada', ranking: '#25', logo: '🎓' },
+        { name: 'McGill University', country: 'Canada', ranking: '#30', logo: '🎓' },
+        { name: 'UBC', country: 'Canada', ranking: '#38', logo: '🎓' },
+        { name: 'University of Alberta', country: 'Canada', ranking: '#111', logo: '🎓' },
+        { name: 'McMaster University', country: 'Canada', ranking: '#189', logo: '🎓' },
+        { name: 'University of Waterloo', country: 'Canada', ranking: '#112', logo: '🎓' },
+
+        // Australia - 6 universities
+        { name: 'ANU', country: 'Australia', ranking: '#30', logo: '🎓' },
+        { name: 'University of Melbourne', country: 'Australia', ranking: '#13', logo: '🎓' },
+        { name: 'University of Sydney', country: 'Australia', ranking: '#18', logo: '🎓' },
+        { name: 'UNSW', country: 'Australia', ranking: '#19', logo: '🎓' },
+        { name: 'University of Queensland', country: 'Australia', ranking: '#43', logo: '🎓' },
+        { name: 'Monash University', country: 'Australia', ranking: '#37', logo: '🎓' },
+
+        // Europe - 11 universities
+        { name: 'ETH Zurich', country: 'Switzerland', ranking: '#7', logo: '🎓' },
+        { name: 'TU Munich', country: 'Germany', ranking: '#37', logo: '🎓' },
+        { name: 'Heidelberg University', country: 'Germany', ranking: '#87', logo: '🎓' },
+        { name: 'LMU Munich', country: 'Germany', ranking: '#59', logo: '🎓' },
+        { name: 'Sorbonne University', country: 'France', ranking: '#59', logo: '🎓' },
+        { name: 'Sciences Po', country: 'France', ranking: '#220', logo: '🎓' },
+        { name: 'TU Delft', country: 'Netherlands', ranking: '#47', logo: '🎓' },
+        { name: 'University of Amsterdam', country: 'Netherlands', ranking: '#53', logo: '🎓' },
+        { name: 'KU Leuven', country: 'Belgium', ranking: '#61', logo: '🎓' },
+        { name: 'University of Copenhagen', country: 'Denmark', ranking: '#109', logo: '🎓' },
+        { name: 'Karoliska Institute', country: 'Sweden', ranking: '#40', logo: '🎓' },
+
+        // Asia - 4 universities
+        { name: 'NUS', country: 'Singapore', ranking: '#8', logo: '🎓' },
+        { name: 'NTU Singapore', country: 'Singapore', ranking: '#15', logo: '🎓' },
+        { name: 'University of Hong Kong', country: 'Hong Kong', ranking: '#26', logo: '🎓' },
+        { name: 'KAIST', country: 'South Korea', ranking: '#56', logo: '🎓' },
     ];
 
     return (

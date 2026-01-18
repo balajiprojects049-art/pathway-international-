@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import heroSlideUSA from '../assets/images/hero_slide_usa.png';
 import heroSlideUK from '../assets/images/hero_slide_uk.png';
 import heroSlideCanada from '../assets/images/hero_slide_canada.png';
@@ -25,6 +25,8 @@ const Home = () => {
     const [featuresRef, featuresInView] = useInView({ triggerOnce: true, threshold: 0.1 });
     const [openFAQ, setOpenFAQ] = useState(null);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [isUniversitiesHovered, setIsUniversitiesHovered] = useState(false);
+    const universitiesScrollRef = useRef(null);
 
     // Animated counters state
     const [counters, setCounters] = useState({
@@ -87,6 +89,39 @@ const Home = () => {
             return () => clearInterval(counter);
         }
     }, [statsInView]);
+
+    // Auto-scroll for universities section
+    useEffect(() => {
+        const scrollContainer = universitiesScrollRef.current;
+        if (!scrollContainer) return;
+
+        let scrollInterval;
+
+        const startAutoScroll = () => {
+            scrollInterval = setInterval(() => {
+                if (!isUniversitiesHovered) {
+                    const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+                    const currentScroll = scrollContainer.scrollLeft;
+
+                    // Scroll by 1 pixel for smooth continuous movement
+                    if (currentScroll >= maxScroll) {
+                        // Reset to beginning for infinite loop
+                        scrollContainer.scrollLeft = 0;
+                    } else {
+                        scrollContainer.scrollLeft += 3;
+                    }
+                }
+            }, 10); // Adjust speed: lower = faster
+        };
+
+        startAutoScroll();
+
+        return () => {
+            if (scrollInterval) {
+                clearInterval(scrollInterval);
+            }
+        };
+    }, [isUniversitiesHovered]);
 
 
     const stats = [
@@ -713,11 +748,39 @@ const Home = () => {
 
                     {/* Horizontal Scroll Container */}
                     <div className="relative">
-                        <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide scroll-smooth snap-x snap-mandatory">
+                        <div
+                            ref={universitiesScrollRef}
+                            onMouseEnter={() => setIsUniversitiesHovered(true)}
+                            onMouseLeave={() => setIsUniversitiesHovered(false)}
+                            className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
+                        >
                             {[
-                                'Harvard University', 'Stanford University', 'MIT', 'Oxford University',
-                                'Cambridge University', 'University of Toronto', 'ANU', 'ETH Zurich',
-                                'Yale University', 'Imperial College', 'McGill University', 'TU Munich'
+                                // USA
+                                'Harvard University', 'Stanford University', 'MIT', 'Yale University',
+                                'Princeton University', 'Columbia University', 'UC Berkeley', 'UCLA',
+                                'University of Chicago', 'Cornell University', 'University of Pennsylvania',
+                                'Duke University', 'Northwestern University', 'Johns Hopkins University',
+
+                                // UK
+                                'Oxford University', 'Cambridge University', 'Imperial College London',
+                                'UCL', 'LSE', 'University of Edinburgh', 'King\'s College London',
+                                'University of Manchester', 'University of Warwick', 'University of Bristol',
+
+                                // Canada
+                                'University of Toronto', 'McGill University', 'UBC',
+                                'University of Alberta', 'McMaster University', 'University of Waterloo',
+
+                                // Australia
+                                'ANU', 'University of Melbourne', 'University of Sydney',
+                                'UNSW', 'University of Queensland', 'Monash University',
+
+                                // Europe
+                                'ETH Zurich', 'TU Munich', 'Heidelberg University', 'LMU Munich',
+                                'Sorbonne University', 'Sciences Po', 'TU Delft', 'University of Amsterdam',
+                                'KU Leuven', 'University of Copenhagen', 'Karolinska Institute',
+
+                                // Asia
+                                'NUS', 'NTU Singapore', 'University of Hong Kong', 'KAIST'
                             ].map((uni, index) => (
                                 <motion.div
                                     key={index}
@@ -738,7 +801,7 @@ const Home = () => {
 
                         {/* Scroll Indicator */}
                         <div className="text-center mt-4 text-sm text-gray-400">
-                            ← Scroll to view more →
+                            {isUniversitiesHovered ? 'Paused - Move mouse away to continue' : 'Auto-scrolling... Hover to pause'}
                         </div>
                     </div>
 
