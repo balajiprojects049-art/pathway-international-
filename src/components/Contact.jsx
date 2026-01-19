@@ -17,11 +17,45 @@ const Contact = () => {
         message: '',
     });
 
-    const handleSubmit = (e) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission
-        alert('Thank you for your interest! We will contact you shortly.');
-        setFormData({ name: '', email: '', phone: '', country: '', message: '' });
+        setIsSubmitting(true);
+        setSubmitStatus({ type: '', message: '' });
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setSubmitStatus({
+                    type: 'success',
+                    message: 'Thank you! We have received your message and will contact you shortly.'
+                });
+                setFormData({ name: '', email: '', phone: '', country: '', message: '' });
+            } else {
+                setSubmitStatus({
+                    type: 'error',
+                    message: data.message || 'Something went wrong. Please try again.'
+                });
+            }
+        } catch (error) {
+            setSubmitStatus({
+                type: 'error',
+                message: 'Failed to send message. Please check your connection and try again.'
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e) => {
@@ -273,13 +307,35 @@ const Contact = () => {
                                     />
                                 </div>
 
+                                {/* Status Message */}
+                                {submitStatus.message && (
+                                    <div className={`p-4 rounded-lg ${submitStatus.type === 'success'
+                                            ? 'bg-green-50 border border-green-200 text-green-800'
+                                            : 'bg-red-50 border border-red-200 text-red-800'
+                                        }`}>
+                                        <p className="font-medium">{submitStatus.message}</p>
+                                    </div>
+                                )}
+
                                 <motion.button
                                     type="submit"
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    className="w-full px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
+                                    disabled={isSubmitting}
+                                    whileHover={!isSubmitting ? { scale: 1.02 } : {}}
+                                    whileTap={!isSubmitting ? { scale: 0.98 } : {}}
+                                    className={`w-full px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                                        }`}
                                 >
-                                    📅 Schedule Consultation
+                                    {isSubmitting ? (
+                                        <span className="flex items-center justify-center gap-2">
+                                            <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            Sending...
+                                        </span>
+                                    ) : (
+                                        '📅 Schedule Consultation'
+                                    )}
                                 </motion.button>
                             </div>
                         </form>
