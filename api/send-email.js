@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
 export default async function handler(req, res) {
     // Only allow POST requests
@@ -102,9 +102,15 @@ export default async function handler(req, res) {
 
     } catch (error) {
         console.error('Email error:', error);
+        console.error('Error details:', {
+            message: error.message,
+            stack: error.stack,
+            code: error.code
+        });
         return res.status(500).json({
             success: false,
-            message: 'Failed to send email. Please try again later.'
+            message: 'Failed to send email. Please try again later.',
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
         });
     }
 }
