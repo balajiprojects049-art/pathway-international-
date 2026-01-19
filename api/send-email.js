@@ -1,6 +1,17 @@
+// Import using require for Vercel compatibility
 const nodemailer = require('nodemailer');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
+    // Set CORS headers
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    // Handle OPTIONS request for CORS
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
     // Only allow POST requests
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method not allowed' });
@@ -15,19 +26,18 @@ export default async function handler(req, res) {
         }
 
         // Create transporter using Gmail SMTP
-        // You'll need to set up App Password in Gmail settings
         const transporter = nodemailer.createTransporter({
             service: 'gmail',
             auth: {
-                user: process.env.EMAIL_USER, // Your Gmail address
-                pass: process.env.EMAIL_PASS, // Your Gmail App Password
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
             },
         });
 
-        // Email to admin (you)
+        // Email to admin
         const adminMailOptions = {
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_RECEIVER || process.env.EMAIL_USER, // Where you want to receive emails
+            to: process.env.EMAIL_RECEIVER || process.env.EMAIL_USER,
             subject: `New Contact Form Submission from ${name}`,
             html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px;">
@@ -105,12 +115,18 @@ export default async function handler(req, res) {
         console.error('Error details:', {
             message: error.message,
             stack: error.stack,
-            code: error.code
+            code: error.code,
+            env: {
+                hasEmailUser: !!process.env.EMAIL_USER,
+                hasEmailPass: !!process.env.EMAIL_PASS,
+                hasEmailReceiver: !!process.env.EMAIL_RECEIVER
+            }
         });
+
         return res.status(500).json({
             success: false,
             message: 'Failed to send email. Please try again later.',
             error: process.env.NODE_ENV === 'development' ? error.message : undefined
         });
     }
-}
+};
