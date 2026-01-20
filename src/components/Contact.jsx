@@ -143,6 +143,10 @@ const Contact = () => {
                                             <div>
                                                 <p className="text-xs text-brand-purple font-bold uppercase">India (Main Branch)</p>
                                                 <p className="font-medium text-gray-900 text-sm">+91 6302 040 874</p>
+                                                <p className="font-medium text-green-600 text-sm flex items-center gap-1 mt-1">
+                                                    <span>💬</span>
+                                                    <span>+91 95024 08286</span>
+                                                </p>
                                                 <p className="text-[10px] text-gray-500">Nellore</p>
                                             </div>
                                         </div>
@@ -310,8 +314,8 @@ const Contact = () => {
                                 {/* Status Message */}
                                 {submitStatus.message && (
                                     <div className={`p-4 rounded-lg ${submitStatus.type === 'success'
-                                            ? 'bg-green-50 border border-green-200 text-green-800'
-                                            : 'bg-red-50 border border-red-200 text-red-800'
+                                        ? 'bg-green-50 border border-green-200 text-green-800'
+                                        : 'bg-red-50 border border-red-200 text-red-800'
                                         }`}>
                                         <p className="font-medium">{submitStatus.message}</p>
                                     </div>

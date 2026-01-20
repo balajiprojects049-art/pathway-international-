@@ -108,6 +108,9 @@ const Footer = () => {
                                 <div className="flex items-center gap-2">
                                     <span>🇮🇳</span> <span>+91 6302 040 874 (India - Main Branch)</span>
                                 </div>
+                                <div className="flex items-center gap-2 ml-6">
+                                    <span>💬</span> <span>+91 95024 08286 (WhatsApp - Nellore)</span>
+                                </div>
                                 <div className="flex items-center gap-2">
                                     <span>🇬🇧</span> <span>+44 7767 934282 (UK - Virtual Office)</span>
                                 </div>

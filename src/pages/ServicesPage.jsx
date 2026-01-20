@@ -77,7 +77,7 @@ const ServicesPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { number: '10,000+', label: 'Students Placed', icon: '🎓' },
+                            { number: '100+', label: 'Students Placed', icon: '🎓' },
                             { number: '98%', label: 'Visa Approval Rate', icon: '✈️' },
                             { number: '50+', label: 'Successful Placements', icon: '🏛️' },
                             { number: '25+', label: 'Countries Covered', icon: '🌍' },

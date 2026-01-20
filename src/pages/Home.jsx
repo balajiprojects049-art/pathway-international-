@@ -126,7 +126,7 @@ const Home = () => {
 
     const stats = [
         { number: '100%', label: 'Student Focus' },
-        { number: '50+', label: 'Partner Universities' },
+        { number: '50+', label: 'Network Universities' },
         { number: '15+', label: 'Countries Worldwide' },
         { number: '100%', label: 'Visa Success Goal' },
     ];
@@ -268,7 +268,7 @@ const Home = () => {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
                             { key: 'students', value: counters.students, suffix: '%', label: 'Student Focus', format: false },
-                            { key: 'partners', value: counters.partners, suffix: '+', label: 'Career Pathways', format: false },
+                            { key: 'partners', value: counters.partners, suffix: '+', label: 'Successful Placements', format: false },
                             { key: 'countries', value: counters.countries, suffix: '+', label: 'Countries Worldwide', format: false },
                             { key: 'visaRate', value: counters.visaRate, suffix: '%', label: 'Visa Success Goal', format: false },
                         ].map((stat, index) => (
@@ -690,11 +690,12 @@ const Home = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { name: 'Priya Sharma', uni: 'Harvard University, USA', quote: 'Pathway International made my dream of studying at Harvard come true. Their guidance was invaluable!', rating: 5 },
-                            { name: 'Rahul Mehta', uni: 'University of Oxford, UK', quote: 'Professional, knowledgeable, and supportive throughout my entire journey. Highly recommended!', rating: 5 },
-                            { name: 'Ananya Patel', uni: 'University of Toronto, Canada', quote: 'From application to visa, they handled everything perfectly. Now I\'m living my Canadian dream!', rating: 5 },
+                            { name: 'Ragavendhra Reddy', uni: 'University of South Wales, UK', quote: 'Pathway International made my dream of studying in the UK come true. Their guidance was invaluable throughout the entire process!', rating: 5 },
+                            { name: 'Prasith', uni: 'University of South Wales', quote: 'Professional, knowledgeable, and supportive throughout my entire journey. Highly recommended for anyone seeking quality education abroad!', rating: 5 },
+                            { name: 'Vamsi Tumati', uni: 'University of Victoria, Australia', quote: 'From application to visa, they handled everything perfectly. Now I\'m living my Australian dream with their expert support!', rating: 5 },
+                            { name: 'Ambedkar', uni: 'Humber College, Canada', quote: 'Exceptional service and guidance! They made my transition to Canada smooth and helped me secure admission at my dream college.', rating: 5 },
                         ].map((testimonial, index) => (
                             <motion.div
                                 key={index}
@@ -728,7 +729,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Partner Universities Section */}
+            {/* Network Universities Section */}
             <section className="py-24 bg-gradient-to-b from-brand-light to-white">
                 <div className="container mx-auto px-4 md:px-8 lg:px-16">
                     <motion.div
@@ -739,7 +740,7 @@ const Home = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-navy-muted mb-4">
-                            Our <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">Partner Universities</span>
+                            Our <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">Network Universities</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                             Direct partnerships with 50+ world-renowned institutions

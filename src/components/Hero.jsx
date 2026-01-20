@@ -112,7 +112,7 @@ const Hero = () => {
                         >
                             {[
                                 { number: '10,000+', label: 'Students Placed' },
-                                { number: '50+', label: 'Partner Universities' },
+                                { number: '50+', label: 'Network Universities' },
                                 { number: '15+', label: 'Countries' },
                             ].map((stat, index) => (
                                 <div key={index} className="text-center">
