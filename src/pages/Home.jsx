@@ -693,9 +693,9 @@ const Home = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             { name: 'Ragavendhra Reddy', uni: 'University of South Wales, UK', quote: 'Pathway International made my dream of studying in the UK come true. Their guidance was invaluable throughout the entire process!', rating: 5 },
-                            { name: 'Prasith', uni: 'University of South Wales', quote: 'Professional, knowledgeable, and supportive throughout my entire journey. Highly recommended for anyone seeking quality education abroad!', rating: 5 },
-                            { name: 'Vamsi Tumati', uni: 'University of Victoria, Australia', quote: 'From application to visa, they handled everything perfectly. Now I\'m living my Australian dream with their expert support!', rating: 5 },
-                            { name: 'Ambedkar', uni: 'Humber College, Canada', quote: 'Exceptional service and guidance! They made my transition to Canada smooth and helped me secure admission at my dream college.', rating: 5 },
+                            { name: 'Galla Prasith', uni: 'University of South Wales', quote: 'Professional, knowledgeable, and supportive throughout my entire journey. Highly recommended for anyone seeking quality education abroad!', rating: 5 },
+                            { name: 'Karthik', uni: 'United Kingdom', quote: 'From application to visa, they handled everything perfectly. Now I\'m living my Australian dream with their expert support!', rating: 5 },
+                            { name: 'Rakesh', uni: 'University of East-London, UK', quote: 'Exceptional service and guidance! They made my transition to Canada smooth and helped me secure admission at my dream college.', rating: 5 },
                         ].map((testimonial, index) => (
                             <motion.div
                                 key={index}
@@ -743,7 +743,7 @@ const Home = () => {
                             Our <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">Network Universities</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Direct partnerships with 50+ world-renowned institutions
+                            Connecting you with 50+ world-renowned institutions internationally
                         </p>
                     </motion.div>
 

@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import usaImage from '../assets/images/usa_study_destination_1767878848400.png';
 import ukImage from '../assets/images/uk_study_destination_1767878865705.png';
 import canadaImage from '../assets/images/canada_study_destination_1767878895785.png';
 import australiaImage from '../assets/images/australia_study_destination_1767878913275.png';
+import irelandImage from '../assets/images/ireland_university.png';
+import newZealandImage from '../assets/images/new_zealand_university.png';
 import europeImage from '../assets/images/europe_study_destination_1767878934797.png';
 import destinationsHeroImage from '../assets/images/destinations_hero_background_1767880556435.png';
 
@@ -16,6 +19,7 @@ const Destinations = () => {
     const destinations = [
         {
             name: 'United States',
+            slug: 'usa',
             flag: '🇺🇸',
             image: usaImage,
             universities: '200+ Universities',
@@ -25,6 +29,7 @@ const Destinations = () => {
         },
         {
             name: 'United Kingdom',
+            slug: 'uk',
             flag: '🇬🇧',
             image: ukImage,
             universities: '100+ Universities',
@@ -34,6 +39,7 @@ const Destinations = () => {
         },
         {
             name: 'Canada',
+            slug: 'canada',
             flag: '🇨🇦',
             image: canadaImage,
             universities: '80+ Universities',
@@ -43,6 +49,7 @@ const Destinations = () => {
         },
         {
             name: 'Australia',
+            slug: 'australia',
             flag: '🇦🇺',
             image: australiaImage,
             universities: '60+ Universities',
@@ -51,7 +58,28 @@ const Destinations = () => {
             topUniversities: ['Melbourne', 'Sydney', 'ANU', 'UNSW'],
         },
         {
+            name: 'Ireland',
+            slug: 'ireland',
+            flag: '🇮🇪',
+            image: irelandImage,
+            universities: '30+ Universities',
+            highlights: '2-Year Post-Study Work Permit',
+            description: 'Study in the Emerald Isle with access to quality education, friendly culture, and excellent post-study work opportunities.',
+            topUniversities: ['Trinity College Dublin', 'UCD', 'NUI Galway', 'UCC'],
+        },
+        {
+            name: 'New Zealand',
+            slug: 'new-zealand',
+            flag: '🇳🇿',
+            image: newZealandImage,
+            universities: '40+ Universities',
+            highlights: 'High-Quality Education & Natural Beauty',
+            description: 'Experience world-renowned education in stunning natural landscapes with welcoming communities and work opportunities.',
+            topUniversities: ['University of Auckland', 'University of Otago', 'Victoria University', 'Canterbury'],
+        },
+        {
             name: 'Europe',
+            slug: 'europe',
             flag: '🇪🇺',
             image: europeImage,
             universities: '150+ Universities',
@@ -200,9 +228,14 @@ const Destinations = () => {
                             <strong>{selectedCountry.universities}</strong> partnered with Pathway International
                         </div>
 
-                        <button className="w-full px-8 py-3 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all">
-                            Start Your Application →
-                        </button>
+                        <Link
+                            to={`/country/${selectedCountry.slug}`}
+                            onClick={() => setSelectedCountry(null)}
+                        >
+                            <button className="w-full px-8 py-3 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all">
+                                Start Your Application →
+                            </button>
+                        </Link>
                     </motion.div>
                 </motion.div>
             )}

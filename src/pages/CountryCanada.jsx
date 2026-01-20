@@ -10,6 +10,7 @@ import heroSlideCanada2 from '../assets/images/hero_slide_canada_2.png';
 import canadaUniversity from '../assets/images/canada_university.png';
 import canadaStudyDestination from '../assets/images/canada_study_destination_1767878895785.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
+import FloatingApplyButton from '../components/FloatingApplyButton';
 
 const CountryCanada = () => {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -81,6 +82,24 @@ const CountryCanada = () => {
                         <p className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-2xl drop-shadow-lg font-light">
                             Discover your future in a nation renowned for inclusivity, breathtaking landscapes, and academic excellence.
                         </p>
+
+                        {/* Apply Now CTA */}
+                        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                            <motion.button
+                                onClick={() => setIsFormOpen(true)}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all flex items-center gap-3"
+                            >
+                                <span>Apply Now</span>
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </motion.button>
+                            <p className="text-sm text-blue-100 font-medium">
+                                ✨ Start your journey today - Free consultation available
+                            </p>
+                        </div>
                     </motion.div>
                 </div>
             </section>
@@ -300,6 +319,9 @@ const CountryCanada = () => {
                 onClose={() => setIsFormOpen(false)}
                 country="Canada"
             />
+
+            {/* Floating Apply Button */}
+            <FloatingApplyButton onClick={() => setIsFormOpen(true)} />
         </div>
     );
 };

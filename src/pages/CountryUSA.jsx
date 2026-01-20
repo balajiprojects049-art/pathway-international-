@@ -10,6 +10,7 @@ import usaUniversity from '../assets/images/usa_university.png';
 import usaStudyDestination from '../assets/images/usa_study_destination_1767878848400.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
 import StudentInquiryForm from '../components/StudentInquiryForm';
+import FloatingApplyButton from '../components/FloatingApplyButton';
 
 const CountryUSA = () => {
     const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -81,6 +82,24 @@ const CountryUSA = () => {
                         <p className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-2xl drop-shadow-lg font-light">
                             Unlock your potential in the land of opportunity. Experience world-class education and limitless career possibilities.
                         </p>
+
+                        {/* Apply Now CTA */}
+                        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                            <motion.button
+                                onClick={() => setIsFormOpen(true)}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-blue text-white rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all flex items-center gap-3"
+                            >
+                                <span>Apply Now</span>
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </motion.button>
+                            <p className="text-sm text-blue-100 font-medium">
+                                ✨ Start your journey today - Free consultation available
+                            </p>
+                        </div>
                     </motion.div>
                 </div>
             </section>
@@ -313,6 +332,9 @@ const CountryUSA = () => {
                 onClose={() => setIsFormOpen(false)}
                 country="USA"
             />
+
+            {/* Floating Apply Button */}
+            <FloatingApplyButton onClick={() => setIsFormOpen(true)} />
         </div>
     );
 };
