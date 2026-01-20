@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
 import { useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import FloatingInstagram from './components/FloatingInstagram';
+// import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Destinations from './pages/Destinations';
@@ -12,16 +13,14 @@ import StudentSuccess from './pages/StudentSuccess';
 import BookConsultation from './pages/BookConsultation';
 import ContactUs from './pages/ContactUs';
 import CountryUSA from './pages/CountryUSA';
-
-import CountryAustralia from './pages/CountryAustralia';
-import CountryCanada from './pages/CountryCanada';
-import CountryEurope from './pages/CountryEurope';
-import CountryIreland from './pages/CountryIreland';
 import CountryUK from './pages/CountryUK';
+import CountryCanada from './pages/CountryCanada';
+import CountryAustralia from './pages/CountryAustralia';
+import CountryIreland from './pages/CountryIreland';
+import CountryEurope from './pages/CountryEurope';
 import CountryNewZealand from './pages/CountryNewZealand';
 import CountryGermany from './pages/CountryGermany';
 import Exams from './pages/Exams';
-
 import SmoothScroll from './components/SmoothScroll';
 
 // Scroll to top on route change
@@ -62,6 +61,7 @@ function App() {
             <Route path="/country/germany" element={<CountryGermany />} />
           </Routes>
           <Footer />
+          <FloatingInstagram />
           {/* <FloatingWhatsApp /> */}
         </div>
       </SmoothScroll>
