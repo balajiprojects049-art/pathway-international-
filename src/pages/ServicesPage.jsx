@@ -79,7 +79,7 @@ const ServicesPage = () => {
                         {[
                             { number: '10,000+', label: 'Students Placed', icon: '🎓' },
                             { number: '98%', label: 'Visa Approval Rate', icon: '✈️' },
-                            { number: '50+', label: 'Partner Institutions', icon: '🏛️' },
+                            { number: '50+', label: 'Career Pathways', icon: '🏛️' },
                             { number: '25+', label: 'Countries Covered', icon: '🌍' },
                         ].map((stat, index) => (
                             <motion.div

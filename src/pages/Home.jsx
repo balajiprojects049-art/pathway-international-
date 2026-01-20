@@ -268,7 +268,7 @@ const Home = () => {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
                             { key: 'students', value: counters.students, suffix: '%', label: 'Student Focus', format: false },
-                            { key: 'partners', value: counters.partners, suffix: '+', label: 'Partner Institutions', format: false },
+                            { key: 'partners', value: counters.partners, suffix: '+', label: 'Career Pathways', format: false },
                             { key: 'countries', value: counters.countries, suffix: '+', label: 'Countries Worldwide', format: false },
                             { key: 'visaRate', value: counters.visaRate, suffix: '%', label: 'Visa Success Goal', format: false },
                         ].map((stat, index) => (
