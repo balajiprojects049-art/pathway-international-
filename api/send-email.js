@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     }
 
     // Create Transporter (Same as Latex Infotech)
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: false, // true for 465, false for other ports
