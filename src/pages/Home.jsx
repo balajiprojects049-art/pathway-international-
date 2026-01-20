@@ -313,7 +313,7 @@ const Home = () => {
                             {
                                 icon: '🌍',
                                 title: 'Global Presence',
-                                description: 'International offices in USA, UK, and Dubai',
+                                description: 'International offices in USA, UK, Australia, Ireland, and New Zealand',
                             },
                             {
                                 icon: '🎓',
