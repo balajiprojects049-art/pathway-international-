@@ -21,7 +21,6 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
         englishTest: '',
         englishScore: '',
         greGmat: '',
-        greGmat: '',
         greGmatScore: '',
         noTests: false,
 
