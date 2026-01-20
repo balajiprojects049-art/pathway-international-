@@ -104,13 +104,13 @@ const Universities = () => {
                             transition={{ duration: 0.8 }}
                         >
                             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-navy-muted mb-6 leading-tight drop-shadow-lg" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.1)' }}>
-                                Partner{' '}
+                                Global Academic{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-blue">
-                                    Universities
+                                    Partners
                                 </span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed max-w-3xl drop-shadow-md">
-                                Direct partnerships with 50+ world-renowned universities across the globe
+                                Exclusive affiliations with over 50+ prestigious institutions worldwide, paving the way for your academic success
                             </p>
                         </motion.div>
                     </div>
