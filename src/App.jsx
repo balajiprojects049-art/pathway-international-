@@ -62,7 +62,7 @@ function App() {
             <Route path="/country/germany" element={<CountryGermany />} />
           </Routes>
           <Footer />
-          <FloatingWhatsApp />
+          {/* <FloatingWhatsApp /> */}
         </div>
       </SmoothScroll>
     </Router>
