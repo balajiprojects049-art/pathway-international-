@@ -196,7 +196,7 @@ const Home = () => {
                                 className="inline-block mb-8"
                             >
                                 <span className="glass-card inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-2.5 rounded-full text-xs md:text-sm font-semibold text-white border border-white/30 bg-white/10 text-center max-w-[90vw] whitespace-normal md:whitespace-nowrap">
-                                    <span>Empowering Global Aspirations Since 2025 (v2)</span>
+                                    <span>Empowering Global Aspirations Since 2025</span>
                                 </span>
                             </motion.div>
 
