@@ -135,7 +135,7 @@ const Home = () => {
         {
             icon: '🌍',
             title: 'Global Presence',
-            description: 'International offices in USA, UK, Australia, Ireland & New Zealand',
+            description: 'International offices in USA, UK, Ireland, Australia & New Zealand',
         },
         {
             icon: '🎓',
@@ -313,7 +313,7 @@ const Home = () => {
                             {
                                 icon: '🌍',
                                 title: 'Global Presence',
-                                description: 'International offices in USA, UK, Australia, Ireland & New Zealand',
+                                description: 'International offices in USA, UK, Ireland, Australia & New Zealand',
                             },
                             {
                                 icon: '🎓',
