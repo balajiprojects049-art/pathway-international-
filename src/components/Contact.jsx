@@ -294,6 +294,9 @@ const Contact = () => {
                                         <option value="uk">United Kingdom</option>
                                         <option value="canada">Canada</option>
                                         <option value="australia">Australia</option>
+                                        <option value="new-zealand">New Zealand</option>
+                                        <option value="germany">Germany</option>
+                                        <option value="ireland">Ireland</option>
                                         <option value="europe">Europe</option>
                                     </select>
                                 </div>

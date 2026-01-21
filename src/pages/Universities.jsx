@@ -103,10 +103,10 @@ const Universities = () => {
                             animate={heroInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.8 }}
                         >
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-navy-muted mb-6 leading-tight drop-shadow-lg" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.1)' }}>
-                                Global Academic{' '}
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-navy-muted mb-6 leading-tight drop-shadow-lg" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.1)' }}>
+                                Our Global University{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-blue">
-                                    Partners
+                                    Network
                                 </span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed max-w-3xl drop-shadow-md">

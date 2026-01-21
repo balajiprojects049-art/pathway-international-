@@ -135,7 +135,7 @@ const Home = () => {
         {
             icon: '🌍',
             title: 'Global Presence',
-            description: 'International offices in USA, UK, Ireland, Australia & New Zealand',
+            description: 'International offices in USA, UK, Canada, Australia, India (Nellore)',
         },
         {
             icon: '🎓',
@@ -313,7 +313,7 @@ const Home = () => {
                             {
                                 icon: '🌍',
                                 title: 'Global Presence',
-                                description: 'International offices in USA, UK, Ireland, Australia & New Zealand',
+                                description: 'International offices in USA, UK, Canada, Australia, India (Nellore)',
                             },
                             {
                                 icon: '🎓',
@@ -685,7 +685,7 @@ const Home = () => {
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-navy-muted mb-4">
                             What Our <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">Students Say</span>
                         </h2>
-                        <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                        <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                             Join ambitious students who are finding their path with our expert guidance.
                         </p>
                     </motion.div>
