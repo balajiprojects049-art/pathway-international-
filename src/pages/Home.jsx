@@ -694,8 +694,8 @@ const Home = () => {
                         {[
                             { name: 'Ragavendhra Reddy', uni: 'University of South Wales, UK', quote: 'Pathway International made my dream of studying in the UK come true. Their guidance was invaluable throughout the entire process!', rating: 5 },
                             { name: 'Galla Prasith', uni: 'University of South Wales', quote: 'Professional, knowledgeable, and supportive throughout my entire journey. Highly recommended for anyone seeking quality education abroad!', rating: 5 },
-                            { name: 'Karthik', uni: 'United Kingdom', quote: 'From application to visa, they handled everything perfectly. Now I\'m living my Australian dream with their expert support!', rating: 5 },
-                            { name: 'Rakesh', uni: 'University of East-London, UK', quote: 'Exceptional service and guidance! They made my transition to Canada smooth and helped me secure admission at my dream college.', rating: 5 },
+                            { name: 'Karthik', uni: 'United Kingdom', quote: 'From application to visa, they handled everything perfectly. Now I\'m living my dream in the UK with their expert support!', rating: 5 },
+                            { name: 'Rakesh', uni: 'University of East-London, UK', quote: 'Exceptional service and guidance! They made my transition to the UK smooth and helped me secure admission at my dream college.', rating: 5 },
                         ].map((testimonial, index) => (
                             <motion.div
                                 key={index}
