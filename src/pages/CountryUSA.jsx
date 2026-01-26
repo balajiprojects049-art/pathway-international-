@@ -10,7 +10,7 @@ import usaUniversity from '../assets/images/usa_university.png';
 import usaStudyDestination from '../assets/images/usa_study_destination_1767878848400.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
 import StudentInquiryForm from '../components/StudentInquiryForm';
-import FloatingApplyButton from '../components/FloatingApplyButton';
+
 
 const CountryUSA = () => {
     const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -333,8 +333,7 @@ const CountryUSA = () => {
                 country="USA"
             />
 
-            {/* Floating Apply Button */}
-            <FloatingApplyButton onClick={() => setIsFormOpen(true)} />
+
         </div>
     );
 };

@@ -83,26 +83,46 @@ const StudentInquiryForm = ({ isOpen, onClose, country }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setSubmitStatus(null);
 
-        // Simulate API call
-        setTimeout(() => {
-            console.log('Form Data:', formData);
-            setSubmitStatus('success');
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    formType: 'application'
+                }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setSubmitStatus('success');
+                // Reset form after 2 seconds
+                setTimeout(() => {
+                    onClose();
+                    setSubmitStatus(null);
+                    setFormData({
+                        fullName: '', email: '', phone: '', country: '', city: '',
+                        highestQualification: '', fieldOfStudy: '', graduationYear: '', gpa: '', secondaryEducation: '',
+                        englishTest: '', englishScore: '', greGmat: '', greGmatScore: '', noTests: false,
+                        interestedCourse: '', degreeLevel: '', preferredIntake: '', budgetRange: '',
+                        workExperience: '', studyDestination: country || '', additionalInfo: ''
+                    });
+                }, 2000);
+            } else {
+                console.error('Submission error:', data);
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            console.error('Failed to submit application:', error);
+            setSubmitStatus('error');
+        } finally {
             setIsSubmitting(false);
-
-            // Reset form after 2 seconds
-            setTimeout(() => {
-                onClose();
-                setSubmitStatus(null);
-                setFormData({
-                    fullName: '', email: '', phone: '', country: '', city: '',
-                    highestQualification: '', fieldOfStudy: '', graduationYear: '', gpa: '', secondaryEducation: '',
-                    englishTest: '', englishScore: '', greGmat: '', greGmatScore: '',
-                    interestedCourse: '', degreeLevel: '', preferredIntake: '', budgetRange: '',
-                    workExperience: '', studyDestination: country || '', additionalInfo: ''
-                });
-            }, 2000);
-        }, 1500);
+        }
     };
 
     if (!isOpen) return null;

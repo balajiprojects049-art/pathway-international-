@@ -10,7 +10,7 @@ import heroSlideUK2 from '../assets/images/hero_slide_uk_2.png';
 import ukUniversity from '../assets/images/uk_university.png';
 import ukStudyDestination from '../assets/images/uk_study_destination_1767878865705.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
-import FloatingApplyButton from '../components/FloatingApplyButton';
+
 
 const CountryUK = () => {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -320,8 +320,7 @@ const CountryUK = () => {
                 country="UK"
             />
 
-            {/* Floating Apply Button */}
-            <FloatingApplyButton onClick={() => setIsFormOpen(true)} />
+
         </div>
     );
 };

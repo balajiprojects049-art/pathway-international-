@@ -10,7 +10,7 @@ import heroSlideCanada2 from '../assets/images/hero_slide_canada_2.png';
 import canadaUniversity from '../assets/images/canada_university.png';
 import canadaStudyDestination from '../assets/images/canada_study_destination_1767878895785.png';
 import globalCtaImage from '../assets/images/global_cta_background.png';
-import FloatingApplyButton from '../components/FloatingApplyButton';
+
 
 const CountryCanada = () => {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -320,8 +320,7 @@ const CountryCanada = () => {
                 country="Canada"
             />
 
-            {/* Floating Apply Button */}
-            <FloatingApplyButton onClick={() => setIsFormOpen(true)} />
+
         </div>
     );
 };
