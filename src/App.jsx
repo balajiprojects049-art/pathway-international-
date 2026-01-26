@@ -3,6 +3,7 @@ import { useEffect, Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import FloatingInstagram from './components/FloatingInstagram';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import SmoothScroll from './components/SmoothScroll';
 
 // Lazy load pages for better performance
@@ -72,6 +73,7 @@ function App() {
           </Suspense>
           <Footer />
           <FloatingInstagram />
+          <FloatingWhatsApp />
         </div>
       </SmoothScroll>
     </Router>
