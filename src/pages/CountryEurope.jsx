@@ -70,7 +70,7 @@ const CountryEurope = () => {
                         className="max-w-4xl bg-black/20 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl"
                     >
                         <div className="flex items-center gap-4 mb-6">
-                            <span className="text-6xl md:text-7xl">🇪🇺</span>
+                            <img src="https://flagcdn.com/w160/eu.png" alt="Europe Flag" className="h-16 md:h-20 w-auto object-contain drop-shadow-md" />
                             <div className="h-16 w-1 bg-blue-600 rounded-full"></div>
                             <h1 className="text-5xl md:text-7xl font-display font-bold text-white drop-shadow-2xl">
                                 Study in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-yellow-300">Europe</span>
